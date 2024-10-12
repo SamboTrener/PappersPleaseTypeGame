@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541a687beecc7e4d8082dfe74fb0ec6, type: 3}
+  m_Name: Oleg
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 6181916537792957723, guid: 7fa1cd2c7dd5744409d02e3d76987373, type: 3}
+  baseSprite: {fileID: 0}
+  eyesNormal: {fileID: 0}
+  eyesAnomaly: {fileID: 0}
+  hairNormal: {fileID: 0}
+  hairAnomaly: {fileID: 0}
+  employeeName: Oleg
+  passID: 
+  age: 48
+  greeting: dsa
+  hasPermission: 1
