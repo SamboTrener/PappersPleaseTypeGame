@@ -30,11 +30,13 @@ public class EmployeesListMenu : MonoBehaviour
     }
     void OpenMenu()
     {
+        closeButton.gameObject.SetActive(true);
         gameObject.SetActive(true);
     }
 
     void CloseMenu()
     {
+        closeButton.gameObject.SetActive(false);
         gameObject.SetActive(false);
     }
 }

@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class ButtonOnMoving : MonoBehaviour
 {
-    public static Action OnEmployeeMoving;
-    public static Action OnEmployeeStopped;
+    public static Action OnButtonsDisable;
+    public static Action OnButtonsEnable;
     Button button;
 
 
@@ -18,14 +18,14 @@ public class ButtonOnMoving : MonoBehaviour
 
     private void OnEnable()
     {
-        OnEmployeeMoving += DisableThis;
-        OnEmployeeStopped += EnableThis;
+        OnButtonsDisable += DisableThis;
+        OnButtonsEnable += EnableThis;
     }
 
     private void OnDisable()
     {
-        OnEmployeeMoving -= DisableThis;
-        OnEmployeeStopped -= EnableThis;
+        OnButtonsDisable -= DisableThis;
+        OnButtonsEnable -= EnableThis;
     }
 
     void DisableThis()

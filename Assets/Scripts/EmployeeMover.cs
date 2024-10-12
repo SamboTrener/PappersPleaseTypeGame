@@ -27,7 +27,7 @@ public class EmployeeMover : MonoBehaviour
 
     void MoveCommon(bool destroyAfterMove, Vector3 dir)
     {
-        ButtonOnMoving.OnEmployeeMoving?.Invoke();
+        ButtonOnMoving.OnButtonsDisable?.Invoke();
         moveDir = dir;
         this.destroyAfterMove = destroyAfterMove;
         isMoving = true;
@@ -53,7 +53,7 @@ public class EmployeeMover : MonoBehaviour
                     isMoving = false;
                 }
                 timeMove = 0;
-                ButtonOnMoving.OnEmployeeStopped?.Invoke();
+                ButtonOnMoving.OnButtonsEnable?.Invoke();
             }
         }
     }

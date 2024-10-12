@@ -5,7 +5,6 @@ using UnityEngine;
 [CreateAssetMenu()]
 public class EmployeeSO : ScriptableObject
 {
-    public Transform prefab;
     public Sprite baseSprite;
 
     public Sprite eyesNormal;

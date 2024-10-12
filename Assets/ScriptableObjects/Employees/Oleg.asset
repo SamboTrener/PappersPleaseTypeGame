@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541a687beecc7e4d8082dfe74fb0ec6, type: 3}
-  m_Name: Oleg GaZmanov
+  m_Name: Oleg
   m_EditorClassIdentifier: 
-  prefab: {fileID: 500966088086618060, guid: 5d760016f248f6042ac3581a469544da, type: 3}
-  baseSprite: {fileID: 0}
+  baseSprite: {fileID: 21300000, guid: ccafb880608f7dd4985d7156a2806c39, type: 3}
   eyesNormal: {fileID: 0}
   eyesAnomaly: {fileID: 0}
   hairNormal: {fileID: 0}
   hairAnomaly: {fileID: 0}
-  employeeName: Oleg GaZmanov
+  employeeName: Oleg
   passID: 
-  age: 99
-  greeting: aaa
+  age: 48
+  greeting: dsa
   hasPermission: 1

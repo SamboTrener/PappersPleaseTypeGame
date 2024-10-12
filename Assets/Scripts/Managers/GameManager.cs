@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     [SerializeField] List<ShiftSO> shifts;
+    [SerializeField] float standartTimeToWait;
+
+    public float StandartTimeToWait => standartTimeToWait;
 
     private void Awake()
     {
@@ -16,9 +19,24 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        ShiftManager.Instance.StartShift(shifts.FirstOrDefault());
-        shifts.Remove(shifts.FirstOrDefault());
+        StartFirstShiftFromList();
+    }
 
-       // EmployeeMover.Instance.MoveRight(false);
+    public void StartNextShift()
+    {
+        shifts.Remove(shifts.First());
+        if(shifts.Count > 0)
+        {
+            StartFirstShiftFromList();
+        }
+        else
+        {
+            //Game end
+        }
+    }
+
+    public void StartFirstShiftFromList()
+    {
+        ShiftManager.Instance.StartShift(shifts.FirstOrDefault());
     }
 }
