@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class EmployeeMover : MonoBehaviour
@@ -9,6 +10,9 @@ public class EmployeeMover : MonoBehaviour
     bool isMoving;
     bool destroyAfterMove = false;
     Vector3 moveDir;
+
+    public static Action OnEmployeeStopped;
+    public static Action OnEmployeeStartMove;
 
     private void Start()
     {
@@ -27,7 +31,8 @@ public class EmployeeMover : MonoBehaviour
 
     void MoveCommon(bool destroyAfterMove, Vector3 dir)
     {
-        ButtonOnMoving.OnButtonsDisable?.Invoke();
+        OnEmployeeStartMove?.Invoke();
+        ButtonInteractableController.OnButtonsDisable?.Invoke();
         moveDir = dir;
         this.destroyAfterMove = destroyAfterMove;
         isMoving = true;
@@ -53,7 +58,8 @@ public class EmployeeMover : MonoBehaviour
                     isMoving = false;
                 }
                 timeMove = 0;
-                ButtonOnMoving.OnButtonsEnable?.Invoke();
+                ButtonInteractableController.OnButtonsEnable?.Invoke();
+                OnEmployeeStopped?.Invoke();
             }
         }
     }

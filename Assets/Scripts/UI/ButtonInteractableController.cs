@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ButtonOnMoving : MonoBehaviour
+public class ButtonInteractableController : MonoBehaviour
 {
     public static Action OnButtonsDisable;
     public static Action OnButtonsEnable;

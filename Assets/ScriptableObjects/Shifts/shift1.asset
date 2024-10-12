@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c865a33fdda1df24ba181bba5194ec22, type: 3}
-  m_Name: day2
+  m_Name: shift1
   m_EditorClassIdentifier: 
-  ID: 2
-  VisitersCount: 6
+  ShiftName: "\u041F\u043E\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u0438\u043A.
+    \u0423\u0442\u0440\u043E."
+  VisitersCount: 2

@@ -6,14 +6,12 @@ using UnityEngine.UI;
 public class EmployeesListMenu : MonoBehaviour
 {
     [SerializeField] Button passButton;
-    [SerializeField] Button closeButton;
     [SerializeField] Transform cellPrefab;
     [SerializeField] Transform cellSpawnPoint;
 
     private void Awake()
     {
         passButton.onClick.AddListener(OpenMenu);
-        closeButton.onClick.AddListener(CloseMenu);
     }
 
     private void Start()
@@ -30,13 +28,11 @@ public class EmployeesListMenu : MonoBehaviour
     }
     void OpenMenu()
     {
-        closeButton.gameObject.SetActive(true);
         gameObject.SetActive(true);
     }
 
     void CloseMenu()
     {
-        closeButton.gameObject.SetActive(false);
         gameObject.SetActive(false);
     }
 }

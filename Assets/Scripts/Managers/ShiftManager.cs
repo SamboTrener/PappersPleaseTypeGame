@@ -33,12 +33,12 @@ public class ShiftManager : MonoBehaviour
 
     public IEnumerator ShowTextForSeconds(string shiftName)
     {
-        ButtonOnMoving.OnButtonsDisable?.Invoke();
+        ButtonInteractableController.OnButtonsDisable?.Invoke();
         TextOnShiftStart.text = shiftName;
         TextOnShiftStart.gameObject.SetActive(true);
         yield return new WaitForSeconds(GameManager.Instance.StandartTimeToWait);
         TextOnShiftStart.gameObject.SetActive(false);
-        ButtonOnMoving.OnButtonsEnable?.Invoke();
+        ButtonInteractableController.OnButtonsEnable?.Invoke();
     }
 
     public void ContinueShift(bool isPreviousAccepted)

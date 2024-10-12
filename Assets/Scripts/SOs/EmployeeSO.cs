@@ -6,17 +6,12 @@ using UnityEngine;
 public class EmployeeSO : ScriptableObject
 {
     public Sprite baseSprite;
-
-    public Sprite eyesNormal;
-    public Sprite eyesAnomaly;
-    public Sprite hairNormal;
-    public Sprite hairAnomaly;
-    //etc sprites of anomalies
-
-
+    public Sprite spriteWithAnomalyFirst;
+    public Sprite spriteWithAnomalySecond;
     public string employeeName;
     public string passID;
     public string age;
     public string greeting;
+    public string fullDescription;
     public bool hasPermission;
 }
