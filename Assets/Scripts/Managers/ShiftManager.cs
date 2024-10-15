@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ShiftManager : MonoBehaviour
 {
     public static ShiftManager Instance { get; private set; }
 
-
     [SerializeField] TextMeshProUGUI textOnShiftStart;
-    [SerializeField] List<PlotCharacterSO> plotCharacters;
-
+   
+    List<PlotCharacterSO> plotCharacters;
     int monstersKilled;
     int employeeAccepted;
     List<EmployeeSO> employeeSOs;
@@ -27,6 +25,8 @@ public class ShiftManager : MonoBehaviour
     public void StartShift(ShiftSO shift)
     {
         employeeSOs = EmployeeManager.Instance.GetDailyListOfEmployees(shift.VisitersCount);
+
+        plotCharacters = new List<PlotCharacterSO>(shift.plotCharacters);
 
         StartCoroutine(ShowTextForSeconds(shift.ShiftName));
 
@@ -43,10 +43,11 @@ public class ShiftManager : MonoBehaviour
 
     public void ContinueShiftWithPlayerActions(bool isPreviousAccepted)
     {
+        MoveCurrentCharacter(isPreviousAccepted);
         if (isPreviousAccepted != currentCharacter.HasPermission())
         {
-            if (isPreviousAccepted == true)
-            {
+            if (isPreviousAccepted == true) //“еперь сотрудник не проходит когда ты не прав
+            { 
                 StartCoroutine(LooseGameWindow.Instance.LooseGameWithMessageAfterWait("¬ы пропустили монстра и он всех убил блин"));
             }
             else
@@ -66,13 +67,13 @@ public class ShiftManager : MonoBehaviour
                 monstersKilled++;
             }
         }
-        ContinueShift(isPreviousAccepted);
+        ContinueShift();
     }
 
 
-    public void ContinueShift(bool shouldMoveRight)
+    public void ContinueShift()
     {
-        MoveCurrentCharacter(shouldMoveRight);
+       // MoveCurrentCharacter(shouldMoveRight);
         if (employeeSOs.Count > 0)
         {
             currentCharacterNumber++;
@@ -112,7 +113,7 @@ public class ShiftManager : MonoBehaviour
         currentCharacter = CharacterSpawner.Instance.SpawnPlotCharacterWithSO(plotCharacterSO);
     }
 
-    void MoveCurrentCharacter(bool shouldMoveRight)
+    public void MoveCurrentCharacter(bool shouldMoveRight)
     {
         if (shouldMoveRight)
         {

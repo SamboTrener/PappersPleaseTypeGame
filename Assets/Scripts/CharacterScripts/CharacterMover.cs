@@ -45,14 +45,13 @@ public class CharacterMover : MonoBehaviour
             else
             {
                 timeMove = 0;
-                ButtonInteractableController.OnButtonsEnable?.Invoke();
                 if (destroyAfterMove)
                 {
-                    Debug.Log("prev GO destroyed");
                     Destroy(gameObject);
                 }
                 else
                 {
+                    ButtonInteractableController.OnButtonsEnable?.Invoke();
                     OnCharacterStopped?.Invoke();
                     isMoving = false;
                 }

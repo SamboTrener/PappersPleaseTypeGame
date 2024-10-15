@@ -7,4 +7,6 @@ public class ShiftSO : ScriptableObject
 {
     public string ShiftName;
     public int VisitersCount;
+    public List<PlotCharacterSO> plotCharacters;
+    public bool isCompleted;
 }

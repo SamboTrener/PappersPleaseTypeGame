@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -6,7 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    [SerializeField] List<ShiftSO> shifts;
+    [SerializeField] ShiftListSO shifts;
     [SerializeField] float standartTimeToWait;
 
     public DifficultyLevel DifficultyLevel { get; private set; }
@@ -18,18 +17,18 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
-    public void StartGame(DifficultyLevel difficultyLevel)
+    private void Start()
     {
-        DifficultyLevel = difficultyLevel;
-        StartFirstShiftFromList();
+        DifficultyLevel = SaveLoadManager.GetDifficultyLevel();
+        StartCurrentShift(SaveLoadManager.GetCurrentShift());
     }
 
     public void StartNextShift()
     {
-        shifts.Remove(shifts.First());
-        if(shifts.Count > 0)
+        if(shifts.shifts.Count > 0)
         {
-            StartFirstShiftFromList();
+            var currentShift = SaveLoadManager.GetCurrentShift();
+            StartCurrentShift(shifts.shifts.FirstOrDefault(shift => shift.ShiftName == currentShift.ShiftName));
         }
         else
         {
@@ -37,8 +36,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void StartFirstShiftFromList()
+    public void StartCurrentShift(ShiftSO shiftSO)
     {
-        ShiftManager.Instance.StartShift(shifts.FirstOrDefault());
+        ShiftManager.Instance.StartShift(shiftSO);
     }
 }

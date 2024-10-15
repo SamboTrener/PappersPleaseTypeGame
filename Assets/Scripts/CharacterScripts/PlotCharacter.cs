@@ -1,4 +1,3 @@
-
 using System.Collections;
 using UnityEngine;
 
@@ -28,6 +27,7 @@ public class PlotCharacter : CommonCharacter
     {
         dialogeWindow.SetActive(true);
         StartCoroutine(GetAllCuesWithPauses());
+        ButtonInteractableController.OnButtonsDisable?.Invoke();
     }
 
     protected override void Leave()
@@ -42,7 +42,8 @@ public class PlotCharacter : CommonCharacter
             dialogeText.text = plotCharacterSO.cueArray[i];
             yield return new WaitForSeconds(GameManager.Instance.StandartTimeToWait);
         }
-        ShiftManager.Instance.ContinueShift(!plotCharacterSO.isFromLeft);
+        ShiftManager.Instance.MoveCurrentCharacter(!plotCharacterSO.isFromLeft);
+        ShiftManager.Instance.ContinueShift();
     }
 
     public override bool HasPermission() => plotCharacterSO.hasPermission;

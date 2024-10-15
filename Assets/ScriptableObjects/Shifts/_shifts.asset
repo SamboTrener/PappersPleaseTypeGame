@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338ed2b5ee5e66c4fbafcb0d200fa715, type: 3}
+  m_Name: _shifts
+  m_EditorClassIdentifier: 
+  shifts:
+  - {fileID: 11400000, guid: 3c5510209e1592a4983c8d310fdd6d7b, type: 2}
+  - {fileID: 11400000, guid: ba4a88b51ae08714abb7d071ad5dd072, type: 2}
+  - {fileID: 11400000, guid: eef5a0718e31f1b4c9f9ddb05c948ce9, type: 2}
+  - {fileID: 11400000, guid: cb63bd60e7393ca489f552aa96ad175a, type: 2}
+  - {fileID: 11400000, guid: df8c0ec36649e9944a5a68342c2ffcb4, type: 2}
+  - {fileID: 11400000, guid: 1c2b9c71ed3b4574caafe722f704406a, type: 2}
