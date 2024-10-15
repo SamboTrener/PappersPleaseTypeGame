@@ -9,14 +9,15 @@ public class ShiftManager : MonoBehaviour
 {
     public static ShiftManager Instance { get; private set; }
 
-    public Employee CurrentEmployee { get; private set; }
 
-    List<EmployeeSO> employeeSOs;
-
-    [SerializeField] TextMeshProUGUI TextOnShiftStart;
+    [SerializeField] TextMeshProUGUI textOnShiftStart;
+    [SerializeField] List<PlotCharacterSO> plotCharacters;
 
     int monstersKilled;
     int employeeAccepted;
+    List<EmployeeSO> employeeSOs;
+    CommonCharacter currentCharacter;
+    int currentCharacterNumber = 0;
 
     private void Awake()
     {
@@ -28,24 +29,23 @@ public class ShiftManager : MonoBehaviour
         employeeSOs = EmployeeManager.Instance.GetDailyListOfEmployees(shift.VisitersCount);
 
         StartCoroutine(ShowTextForSeconds(shift.ShiftName));
-        StartCoroutine(NextEmployeeAfterWait());
-    }
 
-    public IEnumerator ShowTextForSeconds(string shiftName)
-    {
-        ButtonInteractableController.OnButtonsDisable?.Invoke();
-        TextOnShiftStart.text = shiftName;
-        TextOnShiftStart.gameObject.SetActive(true);
-        yield return new WaitForSeconds(GameManager.Instance.StandartTimeToWait);
-        TextOnShiftStart.gameObject.SetActive(false);
-        ButtonInteractableController.OnButtonsEnable?.Invoke();
-    }
 
-    public void ContinueShift(bool isPreviousAccepted)
-    {
-        if(isPreviousAccepted != CurrentEmployee.HasPermission())
+        if (TryGetPlotCharacter(out PlotCharacterSO plotCharacterSO))
         {
-            if(isPreviousAccepted == true)
+            StartCoroutine(StartPlotActionAfterWait(plotCharacterSO));
+        }
+        else
+        {
+            StartCoroutine(NextEmployeeAfterWait());
+        }
+    }
+
+    public void ContinueShiftWithPlayerActions(bool isPreviousAccepted)
+    {
+        if (isPreviousAccepted != currentCharacter.HasPermission())
+        {
+            if (isPreviousAccepted == true)
             {
                 StartCoroutine(LooseGameWindow.Instance.LooseGameWithMessageAfterWait("¬ы пропустили монстра и он всех убил блин"));
             }
@@ -57,7 +57,7 @@ public class ShiftManager : MonoBehaviour
         }
         else
         {
-            if(isPreviousAccepted == true)
+            if (isPreviousAccepted == true)
             {
                 employeeAccepted++;
             }
@@ -66,13 +66,61 @@ public class ShiftManager : MonoBehaviour
                 monstersKilled++;
             }
         }
-        if(employeeSOs.Count > 0)
+        ContinueShift(isPreviousAccepted);
+    }
+
+
+    public void ContinueShift(bool shouldMoveRight)
+    {
+        MoveCurrentCharacter(shouldMoveRight);
+        if (employeeSOs.Count > 0)
         {
-            StartCoroutine(NextEmployeeAfterWait());
+            currentCharacterNumber++;
+            if (TryGetPlotCharacter(out PlotCharacterSO plotCharacterSO))
+            {
+                StartCoroutine(StartPlotActionAfterWait(plotCharacterSO));
+            }
+            else
+            {
+                StartCoroutine(NextEmployeeAfterWait());
+            }
         }
         else
         {
+            currentCharacterNumber = 0;
             StartCoroutine(ShiftEndWindow.Instance.ShowShiftEndWindowAfterWait(monstersKilled, employeeAccepted));
+        }
+    }
+
+    bool TryGetPlotCharacter(out PlotCharacterSO outPlotCharacter)
+    {
+        foreach (var plotCharacter in plotCharacters)
+        {
+            if (plotCharacter.orderOfComming == currentCharacterNumber)
+            {
+                outPlotCharacter = plotCharacter;
+                return true;
+            }
+        }
+        outPlotCharacter = null;
+        return false;
+    }
+
+    IEnumerator StartPlotActionAfterWait(PlotCharacterSO plotCharacterSO)
+    {
+        yield return new WaitForSeconds(GameManager.Instance.StandartTimeToWait);
+        currentCharacter = CharacterSpawner.Instance.SpawnPlotCharacterWithSO(plotCharacterSO);
+    }
+
+    void MoveCurrentCharacter(bool shouldMoveRight)
+    {
+        if (shouldMoveRight)
+        {
+            currentCharacter.GetComponent<CharacterMover>().MoveRight(true);
+        }
+        else
+        {
+            currentCharacter.GetComponent<CharacterMover>().MoveLeft(true);
         }
     }
 
@@ -80,12 +128,22 @@ public class ShiftManager : MonoBehaviour
     {
         var next = employeeSOs.FirstOrDefault();
         employeeSOs.Remove(next);
-        CurrentEmployee = EmployeeManager.Instance.SpawnEmployeeWithSO(next);
+        currentCharacter = CharacterSpawner.Instance.SpawnEmployeeWithSO(next);
     }
 
     IEnumerator NextEmployeeAfterWait()
     {
-        yield return new WaitForSeconds(GameManager.Instance.StandartTimeToWait);
+        yield return new WaitForSeconds(GameManager.Instance.StandartTimeToWait); 
         NextEmployee();
+    }
+
+    IEnumerator ShowTextForSeconds(string shiftName)
+    {
+        ButtonInteractableController.OnButtonsDisable?.Invoke();
+        textOnShiftStart.text = shiftName;
+        textOnShiftStart.gameObject.SetActive(true);
+        yield return new WaitForSeconds(GameManager.Instance.StandartTimeToWait);
+        textOnShiftStart.gameObject.SetActive(false);
+        ButtonInteractableController.OnButtonsEnable?.Invoke();
     }
 }

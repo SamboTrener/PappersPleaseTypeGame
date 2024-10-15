@@ -16,13 +16,11 @@ public class PlayerActionsHandler : MonoBehaviour
 
     void AcceptEmployee()
     {
-        ShiftManager.Instance.CurrentEmployee.GetComponent<EmployeeMover>().MoveRight(true);
-        ShiftManager.Instance.ContinueShift(true);
+        ShiftManager.Instance.ContinueShiftWithPlayerActions(true);
     }
 
     void DeclineEmployee()
     {
-        ShiftManager.Instance.CurrentEmployee.GetComponent<EmployeeMover>().MoveLeft(true);
-        ShiftManager.Instance.ContinueShift(false);
+        ShiftManager.Instance.ContinueShiftWithPlayerActions(false);
     }
 }

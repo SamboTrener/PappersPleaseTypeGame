@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6181916537792957723}
   - component: {fileID: 6633053397107930693}
   - component: {fileID: 6285231698188195012}
-  - component: {fileID: 8900513161178204795}
   - component: {fileID: 3464315983457613242}
+  - component: {fileID: 2519929208410901211}
   m_Layer: 5
   m_Name: EmployeePrefab
   m_TagString: Untagged
@@ -78,20 +78,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8900513161178204795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2598370154961531971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8d1f317631250b47a154d347d409645, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxTimeMove: 3
-  movementSpeed: 4
 --- !u!114 &3464315983457613242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,7 +91,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogeWindow: {fileID: 7300812183625058308}
-  greetingText: {fileID: 2392438285689292628}
+  dialogeText: {fileID: 2392438285689292628}
+--- !u!114 &2519929208410901211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2598370154961531971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7c718ddddbe4b40ae1a9178733b2f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxTimeMove: 3
+  movementSpeed: 4
 --- !u!1 &5319681981335937763
 GameObject:
   m_ObjectHideFlags: 0

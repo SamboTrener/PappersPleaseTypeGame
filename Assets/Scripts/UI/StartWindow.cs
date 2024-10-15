@@ -5,16 +5,20 @@ using UnityEngine.UI;
 
 public class StartWindow : MonoBehaviour
 {
-    [SerializeField] Button startGameButton;
+    [SerializeField] Button easyStartButton;
+    [SerializeField] Button mediumStartButton;
+    [SerializeField] Button hardStartButton;
 
     private void Start()
     {
-        startGameButton.onClick.AddListener(StartGame);
+        easyStartButton.onClick.AddListener(() => StartGame(DifficultyLevel.Easy));
+        mediumStartButton.onClick.AddListener(() => StartGame(DifficultyLevel.Medium));
+        hardStartButton.onClick.AddListener(() => StartGame(DifficultyLevel.Hard));
     }
 
-    void StartGame()
+    void StartGame(DifficultyLevel difficultyLevel)
     {
-        GameManager.Instance.StartGame();
+        GameManager.Instance.StartGame(difficultyLevel);
         gameObject.SetActive(false);
     }
 }

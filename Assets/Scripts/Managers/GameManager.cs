@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +9,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] List<ShiftSO> shifts;
     [SerializeField] float standartTimeToWait;
 
+    public DifficultyLevel DifficultyLevel { get; private set; }
+
     public float StandartTimeToWait => standartTimeToWait;
 
     private void Awake()
@@ -17,8 +18,9 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
-    public void StartGame()
+    public void StartGame(DifficultyLevel difficultyLevel)
     {
+        DifficultyLevel = difficultyLevel;
         StartFirstShiftFromList();
     }
 
