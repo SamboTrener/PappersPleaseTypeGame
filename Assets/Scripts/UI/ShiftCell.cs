@@ -14,17 +14,40 @@ public class ShiftCell : MonoBehaviour
     public void MapShiftParameters(ShiftSO shiftSO)
     {
         shiftName.text = shiftSO.ShiftName;
-        if (shiftSO.isCompleted)
+        playButton = GetComponent<Button>();
+        if (SaveLoadManager.IsShiftCompleted(shiftSO))
         {
             isCompletedImage.gameObject.SetActive(true);
+            var completedShiftInfo = SaveLoadManager.GetCompletedShiftInfoByID(shiftSO.ID);
+            switch (completedShiftInfo.MaxCompletedDifficultyLevel)
+            {
+                case DifficultyLevel.Easy:
+                    isCompletedImage.color = Color.green;
+                    break;
+                case DifficultyLevel.Medium:
+                    isCompletedImage.color = Color.blue;
+                    break;
+                case DifficultyLevel.Hard:
+                    isCompletedImage.color = Color.red;
+                    break;
+
+            }
+
+            playButton.onClick.AddListener(() => LoadSceneWithShift(shiftSO));
         }
-        playButton = GetComponent<Button>();
-        playButton.onClick.AddListener(() => LoadSceneWithShift(shiftSO));
+        else if (shiftSO.ID == SaveLoadManager.GetMostHighCompletedShiftID() + 1) //Тут не 0, а первый ID который меньше минимального пройденного
+        {
+            playButton.onClick.AddListener(() => LoadSceneWithShift(shiftSO));
+        }
+        else
+        {
+            playButton.interactable = false;
+        }
     }
 
     void LoadSceneWithShift(ShiftSO shiftSO)
     {
-        SaveLoadManager.SetCurrentShiftName(shiftSO);
+        SaveLoadManager.SetCurrentShiftID(shiftSO.ID);
         SceneManager.LoadScene("Game");
     }
 }

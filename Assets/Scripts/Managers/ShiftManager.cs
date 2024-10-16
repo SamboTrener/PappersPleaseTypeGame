@@ -46,7 +46,7 @@ public class ShiftManager : MonoBehaviour
         MoveCurrentCharacter(isPreviousAccepted);
         if (isPreviousAccepted != currentCharacter.HasPermission())
         {
-            if (isPreviousAccepted == true) //“еперь сотрудник не проходит когда ты не прав
+            if (isPreviousAccepted == true)
             { 
                 StartCoroutine(LooseGameWindow.Instance.LooseGameWithMessageAfterWait("¬ы пропустили монстра и он всех убил блин"));
             }
@@ -88,10 +88,18 @@ public class ShiftManager : MonoBehaviour
         }
         else
         {
-            currentCharacterNumber = 0;
-            StartCoroutine(ShiftEndWindow.Instance.ShowShiftEndWindowAfterWait(monstersKilled, employeeAccepted));
+            CompleteShift();
         }
     }
+
+    void CompleteShift()
+    {
+        SaveLoadManager.SaveCurrentShiftToCompleted();
+        currentCharacterNumber = 0;
+        StartCoroutine(ShiftEndWindow.Instance.ShowShiftEndWindowAfterWait(monstersKilled, employeeAccepted));
+    }
+
+    public void CompleteShiftTemp() => CompleteShift();
 
     bool TryGetPlotCharacter(out PlotCharacterSO outPlotCharacter)
     {

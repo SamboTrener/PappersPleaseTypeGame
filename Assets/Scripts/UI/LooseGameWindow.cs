@@ -17,7 +17,7 @@ public class LooseGameWindow : MonoBehaviour
     {
         Instance = this;
         againButton.onClick.AddListener(RestartShift);
-        backToMenuButton.onClick.AddListener(() => SceneManager.LoadScene(""));
+        backToMenuButton.onClick.AddListener(() => SceneManager.LoadScene("Menu"));
         gameObject.SetActive(false);
     }
 

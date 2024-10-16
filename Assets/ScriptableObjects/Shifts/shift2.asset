@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c865a33fdda1df24ba181bba5194ec22, type: 3}
   m_Name: shift2
   m_EditorClassIdentifier: 
-  ShiftName: "\u041F\u043E\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u0438\u043A.
-    \u0412\u0435\u0447\u0435\u0440."
-  VisitersCount: 2
+  ID: 2
+  ShiftName: "\u0412\u0442\u043E\u0440\u043D\u0438\u043A. \u0423\u0442\u0440\u043E."
+  VisitersCount: 3
   plotCharacters: []
-  isCompleted: 1
