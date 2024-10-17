@@ -51,7 +51,7 @@ public class CharacterSpawner : MonoBehaviour
         return character;
     }
 
-    public IEnumerator SpawnSomeCharactersWithPauses(List<EmployeeSO> employeeSOs) //Очень костыльный метод
+    public IEnumerator EndGameWithSpawnAllAnomalied(List<EmployeeSO> employeeSOs) //Очень костыльный метод
     {
         foreach(var employeeSO in employeeSOs)
         {
@@ -60,7 +60,7 @@ public class CharacterSpawner : MonoBehaviour
             employee.gameObject.GetComponent<Rigidbody2D>().simulated = false;
             yield return new WaitForSeconds(1f);
         }
-        yield return new WaitForSeconds(5f);
+        StartCoroutine(EndGameWindow.Instance.ShowGameEndWindowAfterWait(false));
         Debug.Log("It is so over");
     }
 

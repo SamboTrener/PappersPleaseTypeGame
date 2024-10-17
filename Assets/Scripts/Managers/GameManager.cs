@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 
@@ -65,7 +66,12 @@ public class GameManager : MonoBehaviour
         if (!isGoodEnding)
         {
             var brokenEmployeeSos = EmployeeManager.Instance.GetAllEmployeeSOsWithBrokenSprite();
-            StartCoroutine(CharacterSpawner.Instance.SpawnSomeCharactersWithPauses(brokenEmployeeSos));
+            StartCoroutine(CharacterSpawner.Instance.EndGameWithSpawnAllAnomalied(brokenEmployeeSos));
+        }
+        else
+        {
+            ShiftManager.Instance.MoveCurrentCharacter(false);
+            StartCoroutine(EndGameWindow.Instance.ShowGameEndWindowAfterWait(true));
         }
     }
 }
