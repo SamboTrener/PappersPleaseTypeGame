@@ -1538,7 +1538,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1312, y: 32}
+  m_AnchoredPosition: {x: 1312, y: 150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &318454262
@@ -4727,6 +4727,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1be61ed7ee4eaa545b2f0ac9a9c3a5a6, type: 2}
   - {fileID: 11400000, guid: af804b6a9749056409cf2a98182d493e, type: 2}
   - {fileID: 11400000, guid: ed515d5b70f3a1a45836aa859509eda5, type: 2}
+  - {fileID: 11400000, guid: b5697c2458e786f4e94c38c4a2f54651, type: 2}
+  - {fileID: 11400000, guid: c45af318bfd386844bbe53bc13b4b637, type: 2}
+  - {fileID: 11400000, guid: c0a536962315e0a4c8569368afbf3184, type: 2}
+  - {fileID: 11400000, guid: ac2dc7b9229cb4b478c9277547790274, type: 2}
+  - {fileID: 11400000, guid: 2cc4ea33ca1cb20469179ba959657b4d, type: 2}
+  - {fileID: 11400000, guid: f1510a9602749c14b831782d38742638, type: 2}
   minAllowedEmployeeCount: 0
   minNotAllowedEmployeeCount: 0
 --- !u!4 &1444811103
@@ -4896,7 +4902,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1312, y: 32}
+  m_AnchoredPosition: {x: -1312, y: 150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1591689508
