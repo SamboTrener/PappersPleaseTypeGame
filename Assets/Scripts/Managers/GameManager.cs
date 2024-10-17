@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
 
     public bool IsLastShift { get; private set; } = false;
 
+    int lastShiftID;
+
     private void Awake()
     {
         Instance = this;
@@ -21,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        lastShiftID = shifts.shifts.Last().ID;
         DifficultyLevel = SaveLoadManager.GetDifficultyLevel();
         var shiftToStart = shifts.shifts.FirstOrDefault(shift => shift.ID == SaveLoadManager.GetCurrentShiftID());
         StartCurrentShift(shiftToStart);
@@ -28,28 +31,41 @@ public class GameManager : MonoBehaviour
 
     public void StartNextShift()
     {
-        if(shifts.shifts.Count > 1) //Все смены обычные до последней 
+        SetIsLastShift();
+        var currentShiftID = SaveLoadManager.GetCurrentShiftID();
+        for (int i = 0; i < shifts.shifts.Count; i++)
         {
-            var currentShiftID = SaveLoadManager.GetCurrentShiftID();
-            for(int i = 0; i < shifts.shifts.Count; i++)
+            if (shifts.shifts[i].ID == currentShiftID)
             {
-                if (shifts.shifts[i].ID == currentShiftID)
-                {
-                    currentShiftID = i + 1;
-                    SaveLoadManager.SetCurrentShiftID(currentShiftID);
-                    StartCurrentShift(shifts.shifts[currentShiftID]);
-                    break;
-                }
+                currentShiftID = i + 1;
+                SaveLoadManager.SetCurrentShiftID(currentShiftID);
+                StartCurrentShift(shifts.shifts[currentShiftID]);
+                break;
             }
-        }
-        else
-        {
-            IsLastShift = true;
         }
     }
 
     public void StartCurrentShift(ShiftSO shiftSO)
     {
+        SetIsLastShift();
         ShiftManager.Instance.StartShift(shiftSO);
+    }
+
+    void SetIsLastShift()
+    {
+        if (lastShiftID == SaveLoadManager.GetCurrentShiftID())
+        {
+            IsLastShift = true;
+            Debug.Log("isLastShift = true");
+        }
+    }
+
+    public void EndGame(bool isGoodEnding)
+    {
+        if (!isGoodEnding)
+        {
+            var brokenEmployeeSos = EmployeeManager.Instance.GetAllEmployeeSOsWithBrokenSprite();
+            StartCoroutine(CharacterSpawner.Instance.SpawnSomeCharactersWithPauses(brokenEmployeeSos));
+        }
     }
 }

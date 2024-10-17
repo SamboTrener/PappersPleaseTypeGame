@@ -63,6 +63,11 @@ public class CharacterMover : MonoBehaviour
     {
         timeMove = maxTimeMove;
     }
+
+    public void SetMaxTimeMove(float maxTimeMove)
+    {
+        this.maxTimeMove = maxTimeMove;
+    }
 }
 
 

@@ -35,7 +35,7 @@ public class ShiftCell : MonoBehaviour
 
             playButton.onClick.AddListener(() => LoadSceneWithShift(shiftSO));
         }
-        else if (shiftSO.ID == SaveLoadManager.GetMostHighCompletedShiftID() + 1) //Тут не 0, а первый ID который меньше минимального пройденного
+        else if (shiftSO.ID == SaveLoadManager.GetMostHighCompletedShiftID() + 1) 
         {
             playButton.onClick.AddListener(() => LoadSceneWithShift(shiftSO));
         }

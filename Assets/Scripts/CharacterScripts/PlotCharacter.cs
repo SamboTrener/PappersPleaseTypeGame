@@ -27,8 +27,19 @@ public class PlotCharacter : CommonCharacter
     protected override void Come()
     {
         DialogueManager.Instance.GetDialogueWindow().SetActive(true);
-        StartCoroutine(GetAllCuesWithPauses());
-        ButtonInteractableController.OnButtonsDisable?.Invoke();
+
+        
+        if (GameManager.Instance.IsLastShift && ShiftManager.Instance.IsLastCharacter)
+        {
+            Debug.Log("Last plot character moving");
+            PrepareForFinalDesicion();
+        }
+        else
+        {
+            Debug.Log("plot character moving");
+            StartCoroutine(GetAllCuesWithPauses());
+            ButtonInteractableController.OnButtonsDisable?.Invoke();
+        }
     }
 
     protected override void Leave()
@@ -36,9 +47,14 @@ public class PlotCharacter : CommonCharacter
         DialogueManager.Instance.GetDialogueWindow().SetActive(false);
     }
 
+    void PrepareForFinalDesicion()
+    {
+        DialogueManager.Instance.GetDialogueText().text = plotCharacterSO.cueArray[0];
+    }
+
     IEnumerator GetAllCuesWithPauses()
     {
-        for(int i = 0; i < plotCharacterSO.cueArray.Length; i++)
+        for (int i = 0; i < plotCharacterSO.cueArray.Length; i++)
         {
             DialogueManager.Instance.GetDialogueText().text = plotCharacterSO.cueArray[i];
             yield return new WaitForSeconds(GameManager.Instance.StandartTimeToWait);

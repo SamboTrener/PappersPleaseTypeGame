@@ -18,11 +18,11 @@ public class CharacterSpawner : MonoBehaviour
         Instance = this;
     }
 
-    public Employee SpawnEmployeeWithSO(EmployeeSO employeeSO)
+    public Employee SpawnEmployeeWithSO(EmployeeSO employeeSO, bool destroyAfterMove)
     {
         var employeeTransform = Instantiate(employeePrefab, leftSpawnPoint.transform);
         var mover = employeeTransform.GetComponent<CharacterMover>();
-        mover.MoveRight(false);
+        mover.MoveRight(destroyAfterMove);
         var employee = employeeTransform.GetComponent<Employee>();
         employee.MapData(employeeSO);
         return employee;
@@ -50,4 +50,18 @@ public class CharacterSpawner : MonoBehaviour
         character.MapData(plotCharacterSO);
         return character;
     }
+
+    public IEnumerator SpawnSomeCharactersWithPauses(List<EmployeeSO> employeeSOs) //Очень костыльный метод
+    {
+        foreach(var employeeSO in employeeSOs)
+        {
+            var employee = SpawnEmployeeWithSO(employeeSO, true);
+            employee.gameObject.GetComponent<CharacterMover>().SetMaxTimeMove(6f);
+            employee.gameObject.GetComponent<Rigidbody2D>().simulated = false;
+            yield return new WaitForSeconds(1f);
+        }
+        yield return new WaitForSeconds(5f);
+        Debug.Log("It is so over");
+    }
+
 }

@@ -22,45 +22,44 @@ public class EmployeeManager : MonoBehaviour
         var employeeSOsCopy = new List<EmployeeSO>(employeeSOs);
         var result = new List<EmployeeSO>();
 
-        for(int i = 0; i < minAllowedEmployeeCount; i++) //Наши слоны
+        for(int i = 0; i < minAllowedEmployeeCount; i++) //Allowed employeee only
         {
-            var nextEmployee = employeeSOsCopy[Random.Range(0, employeeSOsCopy.Count - 1)];
-            nextEmployee.greeting = DialogueManager.Instance.GetRandomValidGreeting();
-            nextEmployee.greeting = DialogueManager.Instance.GetRandomValidGreeting();
-            result.Add(nextEmployee);
-            employeeSOsCopy.Remove(nextEmployee);
+            result.Add(GetEmployeeSO(employeeSOsCopy, false));
+        }
+        for(int i = 0; i < minNotAllowedEmployeeCount; i++) //Not allowed employee only
+        {
+            result.Add(GetEmployeeSO(employeeSOsCopy, true));
         }
 
-        for(int i = 0; i < minNotAllowedEmployeeCount; i++) //Не наши слоны 
+        for (int i = 0; i < count - minAllowedEmployeeCount - minNotAllowedEmployeeCount; i++) //Randomly allowed or not allowed
         {
-            var nextEmployee = employeeSOsCopy[Random.Range(0, employeeSOsCopy.Count - 1)];
-
-            var nextEmployeeCopy = EmployeeSO.CreateInstance(nextEmployee);
-
-            nextEmployeeCopy.greeting = DialogueManager.Instance.GetRandomValidGreeting();
-            
-            BreakEmployee(nextEmployeeCopy);
-
-            result.Add(nextEmployeeCopy);
-            employeeSOsCopy.Remove(nextEmployee);
-        }
-
-        for (int i = 0; i < count - minAllowedEmployeeCount - minNotAllowedEmployeeCount; i++) //А вот тут поди пойми 
-        {
-            var nextEmployee = employeeSOsCopy[Random.Range(0, employeeSOsCopy.Count - 1)];
-
-            var nextEmployeeCopy = EmployeeSO.CreateInstance(nextEmployee);
-
-            nextEmployeeCopy.greeting = DialogueManager.Instance.GetRandomValidGreeting();
-            if (Random.value > 0.5f)
+            if(Random.value > 0.5f)
             {
-                BreakEmployee(nextEmployeeCopy);
+                result.Add(GetEmployeeSO(employeeSOsCopy, true));
             }
-
-            result.Add(nextEmployeeCopy);
-            employeeSOsCopy.Remove(nextEmployee);
+            else
+            {
+                result.Add(GetEmployeeSO(employeeSOsCopy, false));
+            }
         }
+
         return result;
+    }
+
+    EmployeeSO GetEmployeeSO(List<EmployeeSO> employeeSOsCopy, bool shouldBreak)
+    {
+        var nextEmployee = employeeSOsCopy[Random.Range(0, employeeSOsCopy.Count - 1)];
+
+        var nextEmployeeCopy = EmployeeSO.CreateInstance(nextEmployee);
+
+        nextEmployeeCopy.greeting = DialogueManager.Instance.GetRandomValidGreeting();
+        if (shouldBreak)
+        {
+            BreakEmployee(nextEmployeeCopy);
+        }
+
+        employeeSOsCopy.Remove(nextEmployee);
+        return nextEmployeeCopy;
     }
 
     void BreakEmployee(EmployeeSO employee)
@@ -101,7 +100,7 @@ public class EmployeeManager : MonoBehaviour
 
     void BreakSprite(EmployeeSO employee)
     {
-        employee.baseSprite = employee.spritesWithAnomaly[Random.Range(0, employee.spritesWithAnomaly.Length - 1)]; 
+        employee.baseSprite = employee.spritesWithAnomaly[Random.Range(0, employee.spritesWithAnomaly.Length)]; 
     }
 
     void BreakGreeting(EmployeeSO employee)
@@ -124,5 +123,17 @@ public class EmployeeManager : MonoBehaviour
         {
             employee.passID = Random.Range(100000, 999999).ToString();
         }
+    }
+
+    public List<EmployeeSO> GetAllEmployeeSOsWithBrokenSprite()
+    {
+        var result = new List<EmployeeSO>();
+        foreach(var employeeSO in employeeSOs)
+        {
+            var employeeSOCopy = EmployeeSO.CreateInstance(employeeSO);
+            BreakSprite(employeeSOCopy);
+            result.Add(employeeSOCopy);
+        }
+        return result;
     }
 }

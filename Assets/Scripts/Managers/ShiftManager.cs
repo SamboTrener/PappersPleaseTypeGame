@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class ShiftManager : MonoBehaviour
@@ -17,7 +18,7 @@ public class ShiftManager : MonoBehaviour
     CommonCharacter currentCharacter;
     int currentCharacterNumber = 0;
 
-    public bool IsLastEmployee { get; private set; } = false;
+    public bool IsLastCharacter { get; private set; } = false;
 
     private void Awake()
     {
@@ -75,30 +76,26 @@ public class ShiftManager : MonoBehaviour
 
     public void ContinueShift()
     {
-       // MoveCurrentCharacter(shouldMoveRight);
+        Debug.Log($"current character number = {currentCharacterNumber}");
         if (employeeSOs.Count > 0)
         {
             currentCharacterNumber++;
             if (TryGetPlotCharacter(out PlotCharacterSO plotCharacterSO))
             {
+                if (plotCharacterSO == plotCharacters.Last())
+                {
+                    IsLastCharacter = true;
+                    Debug.Log("Last Character = true");
+                }
                 StartCoroutine(StartPlotActionAfterWait(plotCharacterSO));
             }
             else
             {
                 StartCoroutine(NextEmployeeAfterWait());
             }
-            if(employeeSOs.Count == 1)
-            {
-                IsLastEmployee = true;
-            }
-            else
-            {
-                IsLastEmployee = false;
-            }
         }
         else
         {
-            IsLastEmployee = false;
             CompleteShift();
         }
     }
@@ -148,7 +145,7 @@ public class ShiftManager : MonoBehaviour
     {
         var next = employeeSOs.FirstOrDefault();
         employeeSOs.Remove(next);
-        currentCharacter = CharacterSpawner.Instance.SpawnEmployeeWithSO(next);
+        currentCharacter = CharacterSpawner.Instance.SpawnEmployeeWithSO(next, false);
     }
 
     IEnumerator NextEmployeeAfterWait()

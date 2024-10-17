@@ -16,11 +16,25 @@ public class PlayerActionsHandler : MonoBehaviour
 
     void AcceptEmployee()
     {
-        ShiftManager.Instance.ContinueShiftWithPlayerActions(true);
+        if (GameManager.Instance.IsLastShift && ShiftManager.Instance.IsLastCharacter)
+        {
+            GameManager.Instance.EndGame(false);
+        }
+        else
+        {
+            ShiftManager.Instance.ContinueShiftWithPlayerActions(true);
+        }
     }
 
     void DeclineEmployee()
     {
-        ShiftManager.Instance.ContinueShiftWithPlayerActions(false);
+        if (GameManager.Instance.IsLastShift && ShiftManager.Instance.IsLastCharacter)
+        {
+            GameManager.Instance.EndGame(true);
+        }
+        else
+        {
+            ShiftManager.Instance.ContinueShiftWithPlayerActions(false);
+        }
     }
 }
