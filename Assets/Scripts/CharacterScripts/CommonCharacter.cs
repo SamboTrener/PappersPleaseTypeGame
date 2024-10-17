@@ -6,9 +6,6 @@ public abstract class CommonCharacter : MonoBehaviour
 {
     protected Image baseImage;
 
-    [SerializeField] protected GameObject dialogeWindow;
-    [SerializeField] protected TextMeshProUGUI dialogeText;
-
     protected void Awake()
     {
         baseImage = GetComponent<Image>();
@@ -16,8 +13,7 @@ public abstract class CommonCharacter : MonoBehaviour
 
     protected void Start()
     {
-        dialogeWindow.SetActive(false);
-        Debug.Log("hide dialogue window");
+        DialogueManager.Instance.GetDialogueWindow().SetActive(false);
     }
     private void OnEnable()
     {

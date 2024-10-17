@@ -1,13 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class GreetingManager : MonoBehaviour
+public class DialogueManager : MonoBehaviour
 {
-    public static GreetingManager Instance { get; private set; }
+    public static DialogueManager Instance { get; private set; }
 
     [SerializeField] string[] validGreetings;
     [SerializeField] string[] invalidGreetings;
+
+    [SerializeField] GameObject dialogueWindow;
+    [SerializeField] TextMeshProUGUI dialogueText;
+
+    public GameObject GetDialogueWindow() => dialogueWindow;
+    public TextMeshProUGUI GetDialogueText() => dialogueText;
 
     private void Awake()
     {

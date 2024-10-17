@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Yuri
   m_EditorClassIdentifier: 
   baseSprite: {fileID: 21300000, guid: 9dff3f8624ec4734ca85be1775ec5c05, type: 3}
+  hasPermission: 1
   spritesWithAnomaly:
   - {fileID: 21300000, guid: f8646bec1c3a5d1469aa865046a60c28, type: 3}
   - {fileID: 21300000, guid: 1fbf58ee16b98904c880e776a668a397, type: 3}
   employeeName: Yuri
-  anomalyNameList: []
+  anomalyNameList:
+  - niggers
   passID: 148822
   age: 55
   greeting: '-'
   fullDescription: "\u0425\u043E\u0440\u043E\u0448\u0438\u0439 \u043C\u0443\u0436\u0438\u043A"
-  hasPermission: 1

@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Valera
   m_EditorClassIdentifier: 
   baseSprite: {fileID: 21300000, guid: c5d1a277802d99d40945d42dcab46a2f, type: 3}
+  hasPermission: 1
   spritesWithAnomaly:
   - {fileID: 21300000, guid: 1d7a975550ad0684292fb0524abfedc0, type: 3}
   - {fileID: 21300000, guid: 8775a9c1a96d33349bb5410deae62298, type: 3}
   employeeName: 'Valeriy '
-  anomalyNameList: []
+  anomalyNameList:
+  - mr lame
   passID: 148822
   age: 55
   greeting: '-'
   fullDescription: "\u0425\u043E\u0440\u043E\u0448\u0438\u0439 \u043C\u0443\u0436\u0438\u043A"
-  hasPermission: 1

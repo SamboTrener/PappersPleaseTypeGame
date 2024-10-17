@@ -58,4 +58,23 @@ public class CharacterMover : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        timeMove = maxTimeMove;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

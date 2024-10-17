@@ -20,13 +20,13 @@ public class Employee : CommonCharacter
     {
         this.employeeSO = employeeSO;
         baseImage.sprite = employeeSO.baseSprite;
+        baseImage.SetNativeSize();
     }
 
     protected override void Come()
     {
-        Debug.Log("COME worked");
-        dialogeText.text = employeeSO.greeting;
-        dialogeWindow.SetActive(true);
+        DialogueManager.Instance.GetDialogueText().text = employeeSO.greeting;
+        DialogueManager.Instance.GetDialogueWindow().SetActive(true);
         DocumentMenu.Instance.ShowDocument(employeeSO);
         FullDescrMenu.Instance.FillDescrMenu(employeeSO);
     }
@@ -34,7 +34,7 @@ public class Employee : CommonCharacter
     protected override void Leave()
     {
         DocumentMenu.Instance.HideDocument();
-        dialogeWindow.SetActive(false);
+        DialogueManager.Instance.GetDialogueWindow().SetActive(false);
     }
 
     public override bool HasPermission() => employeeSO.hasPermission;

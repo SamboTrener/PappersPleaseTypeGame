@@ -21,25 +21,26 @@ public class PlotCharacter : CommonCharacter
     {
         this.plotCharacterSO = plotCharacterSO;
         baseImage.sprite = plotCharacterSO.baseSprite;
+        baseImage.SetNativeSize();
     }
 
     protected override void Come()
     {
-        dialogeWindow.SetActive(true);
+        DialogueManager.Instance.GetDialogueWindow().SetActive(true);
         StartCoroutine(GetAllCuesWithPauses());
         ButtonInteractableController.OnButtonsDisable?.Invoke();
     }
 
     protected override void Leave()
     {
-        dialogeWindow.SetActive(false);
+        DialogueManager.Instance.GetDialogueWindow().SetActive(false);
     }
 
     IEnumerator GetAllCuesWithPauses()
     {
         for(int i = 0; i < plotCharacterSO.cueArray.Length; i++)
         {
-            dialogeText.text = plotCharacterSO.cueArray[i];
+            DialogueManager.Instance.GetDialogueText().text = plotCharacterSO.cueArray[i];
             yield return new WaitForSeconds(GameManager.Instance.StandartTimeToWait);
         }
         ShiftManager.Instance.MoveCurrentCharacter(!plotCharacterSO.isFromLeft);

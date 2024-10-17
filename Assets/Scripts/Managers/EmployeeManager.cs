@@ -25,8 +25,8 @@ public class EmployeeManager : MonoBehaviour
         for(int i = 0; i < minAllowedEmployeeCount; i++) //Наши слоны
         {
             var nextEmployee = employeeSOsCopy[Random.Range(0, employeeSOsCopy.Count - 1)];
-            nextEmployee.greeting = GreetingManager.Instance.GetRandomValidGreeting();
-            nextEmployee.greeting = GreetingManager.Instance.GetRandomValidGreeting();
+            nextEmployee.greeting = DialogueManager.Instance.GetRandomValidGreeting();
+            nextEmployee.greeting = DialogueManager.Instance.GetRandomValidGreeting();
             result.Add(nextEmployee);
             employeeSOsCopy.Remove(nextEmployee);
         }
@@ -37,7 +37,7 @@ public class EmployeeManager : MonoBehaviour
 
             var nextEmployeeCopy = EmployeeSO.CreateInstance(nextEmployee);
 
-            nextEmployeeCopy.greeting = GreetingManager.Instance.GetRandomValidGreeting();
+            nextEmployeeCopy.greeting = DialogueManager.Instance.GetRandomValidGreeting();
             
             BreakEmployee(nextEmployeeCopy);
 
@@ -51,7 +51,7 @@ public class EmployeeManager : MonoBehaviour
 
             var nextEmployeeCopy = EmployeeSO.CreateInstance(nextEmployee);
 
-            nextEmployeeCopy.greeting = GreetingManager.Instance.GetRandomValidGreeting();
+            nextEmployeeCopy.greeting = DialogueManager.Instance.GetRandomValidGreeting();
             if (Random.value > 0.5f)
             {
                 BreakEmployee(nextEmployeeCopy);
@@ -106,7 +106,7 @@ public class EmployeeManager : MonoBehaviour
 
     void BreakGreeting(EmployeeSO employee)
     {
-        employee.greeting = GreetingManager.Instance.GetRandomInvalidGreeting();
+        employee.greeting = DialogueManager.Instance.GetRandomInvalidGreeting();
     }
 
     void BreakDocuments(EmployeeSO employee)

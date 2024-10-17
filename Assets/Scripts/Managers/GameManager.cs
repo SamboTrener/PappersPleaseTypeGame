@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
 
     public float StandartTimeToWait => standartTimeToWait;
 
+    public bool IsLastShift { get; private set; } = false;
+
     private void Awake()
     {
         Instance = this;
@@ -26,16 +28,14 @@ public class GameManager : MonoBehaviour
 
     public void StartNextShift()
     {
-        if(shifts.shifts.Count > 0)
+        if(shifts.shifts.Count > 1) //Все смены обычные до последней 
         {
             var currentShiftID = SaveLoadManager.GetCurrentShiftID();
             for(int i = 0; i < shifts.shifts.Count; i++)
             {
                 if (shifts.shifts[i].ID == currentShiftID)
                 {
-                    Debug.Log($"i = {i}");
                     currentShiftID = i + 1;
-                    Debug.Log(currentShiftID);
                     SaveLoadManager.SetCurrentShiftID(currentShiftID);
                     StartCurrentShift(shifts.shifts[currentShiftID]);
                     break;
@@ -44,13 +44,12 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            //Game end
+            IsLastShift = true;
         }
     }
 
     public void StartCurrentShift(ShiftSO shiftSO)
     {
-        Debug.Log($"shift ID = {shiftSO.ID}");
         ShiftManager.Instance.StartShift(shiftSO);
     }
 }

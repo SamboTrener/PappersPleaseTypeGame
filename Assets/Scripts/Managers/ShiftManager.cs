@@ -17,6 +17,8 @@ public class ShiftManager : MonoBehaviour
     CommonCharacter currentCharacter;
     int currentCharacterNumber = 0;
 
+    public bool IsLastEmployee { get; private set; } = false;
+
     private void Awake()
     {
         Instance = this;
@@ -85,9 +87,18 @@ public class ShiftManager : MonoBehaviour
             {
                 StartCoroutine(NextEmployeeAfterWait());
             }
+            if(employeeSOs.Count == 1)
+            {
+                IsLastEmployee = true;
+            }
+            else
+            {
+                IsLastEmployee = false;
+            }
         }
         else
         {
+            IsLastEmployee = false;
             CompleteShift();
         }
     }
