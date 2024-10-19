@@ -8,7 +8,6 @@ public class FullDescrMenu : MonoBehaviour
 {
     public static FullDescrMenu Instance { get; private set; }
 
-    [SerializeField] Image photo;
     [SerializeField] TextMeshProUGUI fullDescr;
     [SerializeField] Button fullDescrButton;
 
@@ -21,7 +20,6 @@ public class FullDescrMenu : MonoBehaviour
 
     public void FillDescrMenu(EmployeeSO employeeSO)
     {
-        photo.sprite = employeeSO.baseSprite;
         fullDescr.text = employeeSO.fullDescription;
     }
 }
