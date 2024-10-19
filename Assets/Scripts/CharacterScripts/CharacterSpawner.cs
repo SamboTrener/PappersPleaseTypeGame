@@ -57,8 +57,9 @@ public class CharacterSpawner : MonoBehaviour
         {
             var employee = SpawnEmployeeWithSO(employeeSO, true);
             employee.gameObject.GetComponent<CharacterMover>().SetMaxTimeMove(6f);
+            employee.gameObject.GetComponent<CharacterMover>().SetMoveSpeed(8f);
             employee.gameObject.GetComponent<Rigidbody2D>().simulated = false;
-            yield return new WaitForSeconds(1f);
+           yield return new WaitForSeconds(0.3f);
         }
         StartCoroutine(EndGameWindow.Instance.ShowGameEndWindowAfterWait(false));
         Debug.Log("It is so over");

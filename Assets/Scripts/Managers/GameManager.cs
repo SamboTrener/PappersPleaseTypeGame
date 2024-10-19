@@ -73,5 +73,6 @@ public class GameManager : MonoBehaviour
             ShiftManager.Instance.MoveCurrentCharacter(false);
             StartCoroutine(EndGameWindow.Instance.ShowGameEndWindowAfterWait(true));
         }
+        SaveLoadManager.SaveCurrentShiftToCompleted();
     }
 }

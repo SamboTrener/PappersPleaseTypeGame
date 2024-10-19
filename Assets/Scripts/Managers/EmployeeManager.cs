@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EmployeeManager : MonoBehaviour
@@ -130,10 +131,14 @@ public class EmployeeManager : MonoBehaviour
         var result = new List<EmployeeSO>();
         foreach(var employeeSO in employeeSOs)
         {
-            var employeeSOCopy = EmployeeSO.CreateInstance(employeeSO);
-            BreakSprite(employeeSOCopy);
-            result.Add(employeeSOCopy);
+            for(int i = 0; i < employeeSO.spritesWithAnomaly.Length; i++)
+            {
+                var employeeSOCopy = EmployeeSO.CreateInstance(employeeSO);
+                employeeSOCopy.baseSprite = employeeSOCopy.spritesWithAnomaly[i];
+                result.Add(employeeSOCopy);
+            }
         }
-        return result;
+        var random = new System.Random();
+        return result.OrderBy(x => random.Next()).ToList();
     }
 }

@@ -21,7 +21,9 @@ public class DialogueManager : MonoBehaviour
         Instance = this;
     }
 
-    public string GetRandomInvalidGreeting() => invalidGreetings[Random.Range(0, invalidGreetings.Length - 1)];
-    public string GetRandomValidGreeting() => validGreetings[Random.Range(0, validGreetings.Length - 1)];
+    public string GetRandomInvalidGreeting() => invalidGreetings[Random.Range(0, invalidGreetings.Length)];
+    public string GetRandomValidGreeting() => validGreetings[Random.Range(0, validGreetings.Length)];
+
+    public string[] GetAllValidGreetings() => validGreetings;
 }
 
