@@ -22,13 +22,13 @@ public class ShiftCell : MonoBehaviour
             switch (completedShiftInfo.MaxCompletedDifficultyLevel)
             {
                 case DifficultyLevel.Easy:
-                    isCompletedImage.color = Color.green;
+                    isCompletedImage.color = new Color(174 / 255f,190 / 255f, 159 / 255f);
                     break;
                 case DifficultyLevel.Medium:
-                    isCompletedImage.color = Color.blue;
+                    isCompletedImage.color = new Color(192 / 255f, 195 / 255f, 115 / 255f);
                     break;
                 case DifficultyLevel.Hard:
-                    isCompletedImage.color = Color.red;
+                    isCompletedImage.color = new Color(166 / 255f, 88 / 255f, 88 / 255f);
                     break;
 
             }
