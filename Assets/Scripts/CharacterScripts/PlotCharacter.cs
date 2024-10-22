@@ -4,17 +4,20 @@ using UnityEngine;
 public class PlotCharacter : CommonCharacter
 {
     PlotCharacterSO plotCharacterSO;
+    int currentCue = -1;
 
     private void OnEnable()
     {
         CharacterMover.OnCharacterStopped += Come;
         CharacterMover.OnCharacterStartMove += Leave;
+        DialogueManager.Instance.OnNextCueButtonPressed += GetNextCue;
     }
 
     private void OnDisable()
     {
         CharacterMover.OnCharacterStopped -= Come;
         CharacterMover.OnCharacterStartMove -= Leave;
+        DialogueManager.Instance.OnNextCueButtonPressed -= GetNextCue;
     }
 
     public void MapData(PlotCharacterSO plotCharacterSO)
@@ -27,41 +30,55 @@ public class PlotCharacter : CommonCharacter
     protected override void Come()
     {
         DialogueManager.Instance.GetDialogueWindow().SetActive(true);
-
+        DialogueManager.Instance.ShowNextCueButton();
         
         if (GameManager.Instance.IsLastShift && ShiftManager.Instance.IsLastCharacter)
         {
-            Debug.Log("Last plot character moving");
             PrepareForFinalDesicion();
         }
         else
         {
-            Debug.Log("plot character moving");
-            StartCoroutine(GetAllCuesWithPauses());
+            GetNextCue();
             ButtonInteractableController.OnButtonsDisable?.Invoke();
         }
     }
 
     protected override void Leave()
     {
+        DialogueManager.Instance.HideNextCueButton();
         DialogueManager.Instance.GetDialogueWindow().SetActive(false);
     }
 
     void PrepareForFinalDesicion()
     {
         DialogueManager.Instance.GetDialogueText().text = plotCharacterSO.cueArray[0];
+        DialogueManager.Instance.HideNextCueButton();
     }
 
-    IEnumerator GetAllCuesWithPauses()
+    void GetNextCue()
     {
-        for (int i = 0; i < plotCharacterSO.cueArray.Length; i++)
+        if(currentCue >= plotCharacterSO.cueArray.Length - 1)
         {
-            DialogueManager.Instance.GetDialogueText().text = plotCharacterSO.cueArray[i];
-            yield return new WaitForSeconds(GameManager.Instance.StandartTimeToWait);
+            ShiftManager.Instance.MoveCurrentCharacter(!plotCharacterSO.isFromLeft);
+            ShiftManager.Instance.ContinueShift();
         }
-        ShiftManager.Instance.MoveCurrentCharacter(!plotCharacterSO.isFromLeft);
-        ShiftManager.Instance.ContinueShift();
+        else
+        {
+            currentCue++;
+            DialogueManager.Instance.GetDialogueText().text = plotCharacterSO.cueArray[currentCue];
+        }
     }
 
     public override bool HasPermission() => plotCharacterSO.hasPermission;
+    public override void Move(bool shouldMoveRight)
+    {
+        if (shouldMoveRight)
+        {
+            gameObject.GetComponent<CharacterMover>().MoveRight(true);
+        }
+        else
+        {
+            gameObject.GetComponent<CharacterMover>().MoveLeft(true);
+        }
+    }
 }

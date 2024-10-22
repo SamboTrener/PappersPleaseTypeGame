@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fef4f2e3058cda4ea380e3cbe3e4304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  strangePhraseChance: 1
 --- !u!114 &2519929208410901211
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -76,7 +76,6 @@ public class ShiftManager : MonoBehaviour
 
     public void ContinueShift()
     {
-        Debug.Log($"current character number = {currentCharacterNumber}");
         if (employeeSOs.Count > 0)
         {
             currentCharacterNumber++;
@@ -85,7 +84,6 @@ public class ShiftManager : MonoBehaviour
                 if (plotCharacterSO == plotCharacters.Last())
                 {
                     IsLastCharacter = true;
-                    Debug.Log("Last Character = true");
                 }
                 StartCoroutine(StartPlotActionAfterWait(plotCharacterSO));
             }
@@ -131,14 +129,7 @@ public class ShiftManager : MonoBehaviour
 
     public void MoveCurrentCharacter(bool shouldMoveRight)
     {
-        if (shouldMoveRight)
-        {
-            currentCharacter.GetComponent<CharacterMover>().MoveRight(true);
-        }
-        else
-        {
-            currentCharacter.GetComponent<CharacterMover>().MoveLeft(true);
-        }
+        currentCharacter.Move(shouldMoveRight);
     }
 
     void NextEmployee()

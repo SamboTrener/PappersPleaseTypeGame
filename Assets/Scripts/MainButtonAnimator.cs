@@ -17,7 +17,6 @@ public class MainButtonAnimator : MonoBehaviour
 
     void PlayPressAnimation()
     {
-        Debug.Log("Trigger set");
         animator.SetTrigger("ButtonPress");
     }
 }

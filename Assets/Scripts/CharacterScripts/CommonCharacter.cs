@@ -29,6 +29,7 @@ public abstract class CommonCharacter : MonoBehaviour
 
     protected abstract void Come();
     protected abstract void Leave();
+    public abstract void Move(bool shouldMoveRight);
 
     public abstract bool HasPermission();
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Employee : CommonCharacter
@@ -38,4 +39,16 @@ public class Employee : CommonCharacter
     }
 
     public override bool HasPermission() => employeeSO.hasPermission;
+
+    public override void Move(bool shouldMoveRight)
+    {
+        if (shouldMoveRight)
+        {
+            gameObject.GetComponent<CharacterMover>().MoveRight(true);
+        }
+        else
+        {
+            gameObject.GetComponent<CharacterMover>().MoveLeft(true);
+        }
+    }
 }
