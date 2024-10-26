@@ -1,10 +1,10 @@
 {
-  "idSave": 147,
+  "idSave": 172,
   "isFirstSession": false,
   "language": "ru",
   "promptDone": false,
-  "currentShiftID": 1,
-  "difficultyLevel": 1,
+  "currentShiftID": 0,
+  "difficultyLevel": 2,
   "completedShifts": [
     {
       "ID": 0,
