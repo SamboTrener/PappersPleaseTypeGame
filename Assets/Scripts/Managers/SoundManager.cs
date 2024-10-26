@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class SoundManager : MonoBehaviour
 {
@@ -11,6 +13,11 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioClip ironCurtainDown;
     [SerializeField] AudioClip ironCurtainUp;
     [SerializeField] AudioClip gunshoots;
+    [SerializeField] AudioClip acceptButtonSound;
+    [SerializeField] AudioClip declineButtonSound;
+    [SerializeField] AudioClip radioInteractionSound;
+    [SerializeField] AudioClip stepSound;
+    [SerializeField] AudioClip paperSound;
 
     private void Awake()
     {
@@ -33,5 +40,30 @@ public class SoundManager : MonoBehaviour
     {
         source.PlayOneShot(ironCurtainUp);
         yield return new WaitForSeconds(ironCurtainUp.length);
+    }
+
+    public void PlayAcceptSound()
+    {
+        source.PlayOneShot(acceptButtonSound);
+    }
+
+    public void PlayDeclineSound()
+    {
+        source.PlayOneShot(declineButtonSound);
+    }
+
+    public void PlayRadioInteractionSound()
+    {
+        source.PlayOneShot(radioInteractionSound);
+    }
+
+    public void PlayFootstepsSound(Vector2 position)
+    {
+        AudioSource.PlayClipAtPoint(stepSound, position, 1f);
+    }
+
+    public void PlayPaperSound(Vector2 position)
+    {
+        AudioSource.PlayClipAtPoint(paperSound, position, 1f);
     }
 }

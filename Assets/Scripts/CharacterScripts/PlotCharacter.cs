@@ -51,6 +51,8 @@ public class PlotCharacter : CommonCharacter
 
     void PrepareForFinalDesicion()
     {
+        var sounds = GetComponent<CharacterSounds>();
+        sounds.enabled = false;
         DialogueManager.Instance.GetDialogueText().text = plotCharacterSO.cueArray[0];
         DialogueManager.Instance.HideNextCueButton();
     }

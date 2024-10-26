@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            IronCurtain.Instance.OnIronCurtainDown?.Invoke();
             ShiftManager.Instance.MoveCurrentCharacter(false);
             StartCoroutine(EndGameWindow.Instance.ShowGameEndWindowAfterWait(true));
         }

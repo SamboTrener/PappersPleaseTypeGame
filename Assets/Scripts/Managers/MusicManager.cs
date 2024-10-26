@@ -37,12 +37,14 @@ public class MusicManager : MonoBehaviour
 
     void VolumeUp()
     {
+        SoundManager.Instance.PlayRadioInteractionSound();
         musicSource.volume += 0.1f;
         lastVolume = musicSource.volume;
     }
 
     void VolumeDown()
     {
+        SoundManager.Instance.PlayRadioInteractionSound();
         musicSource.volume -= 0.1f;
         lastVolume = musicSource.volume;
     }
@@ -51,6 +53,7 @@ public class MusicManager : MonoBehaviour
     {
         if (currentStationID != 0)
         {
+            SoundManager.Instance.PlayRadioInteractionSound();
             musicSource.clip = trackList[currentStationID - 1];
             currentStationID--;
             musicSource.Play();
@@ -60,6 +63,7 @@ public class MusicManager : MonoBehaviour
     {
         if (currentStationID != trackList.Length - 1)
         {
+            SoundManager.Instance.PlayRadioInteractionSound();
             musicSource.clip = trackList[currentStationID + 1];
             currentStationID++;
             musicSource.Play();
@@ -68,6 +72,7 @@ public class MusicManager : MonoBehaviour
 
     void TurnOnMusic()
     {
+        SoundManager.Instance.PlayRadioInteractionSound();
         musicSource.volume = lastVolume;
 
         switchMusicButton.onClick.RemoveAllListeners();
@@ -77,6 +82,7 @@ public class MusicManager : MonoBehaviour
 
     void TurnOffMusic()
     {
+        SoundManager.Instance.PlayRadioInteractionSound();
         musicSource.volume = 0;
 
         switchMusicButton.onClick.RemoveAllListeners();

@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class EmployeesListMenu : MonoBehaviour
 {
-    [SerializeField] Button passButton;
+    [SerializeField] Button employeeListButton;
     [SerializeField] Transform cellPrefab;
     [SerializeField] Transform cellSpawnPoint;
 
     private void Awake()
     {
-        passButton.onClick.AddListener(OpenMenu);
+        employeeListButton.onClick.AddListener(OpenMenu);
     }
 
     private void Start()
@@ -28,6 +28,7 @@ public class EmployeesListMenu : MonoBehaviour
     }
     void OpenMenu()
     {
+        SoundManager.Instance.PlayPaperSound(employeeListButton.gameObject.transform.position);
         gameObject.SetActive(true);
     }
 

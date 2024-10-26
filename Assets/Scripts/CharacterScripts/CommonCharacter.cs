@@ -32,4 +32,10 @@ public abstract class CommonCharacter : MonoBehaviour
     public abstract void Move(bool shouldMoveRight);
 
     public abstract bool HasPermission();
+
+    public void StopPlayingSound()
+    {
+        var characterSounds = GetComponent<CharacterSounds>();
+        characterSounds.enabled = false;
+    }
 }

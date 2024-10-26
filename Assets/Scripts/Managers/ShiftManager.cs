@@ -51,11 +51,12 @@ public class ShiftManager : MonoBehaviour
         {
             if (isPreviousAccepted == true)
             {
-                StartCoroutine(LooseGameWindow.Instance.LooseGameWithMessageAfterWait("Вы пропустили монстра и он всех убил блин"));
+                StartCoroutine(LooseGameWindow.Instance.LooseGameWithAnimation("Вы пропустили монстра и он всех убил блин"));
             }
             else
             {
                 IronCurtain.Instance.OnIronCurtainDown?.Invoke();
+                currentCharacter.StopPlayingSound();
                 StartCoroutine(LooseGameWindow.Instance.LooseGameWithMessageAfterWait("Вы ликвидировали сотрудинка завода. Ну вы и тварь"));
             }
             return;
@@ -69,6 +70,7 @@ public class ShiftManager : MonoBehaviour
             else
             {
                 IronCurtain.Instance.OnIronCurtainDown?.Invoke();
+                currentCharacter.StopPlayingSound();
                 monstersKilled++;
             }
         }

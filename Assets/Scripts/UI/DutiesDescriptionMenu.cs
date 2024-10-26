@@ -12,7 +12,7 @@ public class DutiesDescriptionMenu : MonoBehaviour
 
     private void Awake()
     {
-        button.onClick.AddListener(() => gameObject.SetActive(true));
+        button.onClick.AddListener(OpenMenu);
 
         if(SaveLoadManager.GetDifficultyLevel() == DifficultyLevel.Easy)
         {
@@ -25,5 +25,11 @@ public class DutiesDescriptionMenu : MonoBehaviour
         }
 
         gameObject.SetActive(false);
+    }
+
+    void OpenMenu()
+    {
+        SoundManager.Instance.PlayPaperSound(button.gameObject.transform.position);
+        gameObject.SetActive(true);
     }
 }

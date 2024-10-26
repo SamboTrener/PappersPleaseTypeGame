@@ -16,6 +16,7 @@ public class PlayerActionsHandler : MonoBehaviour
 
     void AcceptEmployee()
     {
+        SoundManager.Instance.PlayAcceptSound();
         if (GameManager.Instance.IsLastShift && ShiftManager.Instance.IsLastCharacter)
         {
             GameManager.Instance.EndGame(false);
@@ -28,6 +29,7 @@ public class PlayerActionsHandler : MonoBehaviour
 
     void DeclineEmployee()
     {
+        SoundManager.Instance.PlayDeclineSound();
         if (GameManager.Instance.IsLastShift && ShiftManager.Instance.IsLastCharacter)
         {
             GameManager.Instance.EndGame(true);

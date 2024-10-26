@@ -33,4 +33,13 @@ public class LooseGameWindow : MonoBehaviour
         gameObject.SetActive(true);
         looseText.text = message;
     }
+
+    public IEnumerator LooseGameWithAnimation(string message)
+    {
+        yield return new WaitForSeconds(GameManager.Instance.StandartTimeToWait);
+        GameEndAnimator.Instance.OnGameEndAnimation?.Invoke();
+        yield return new WaitForSeconds(5f);
+        gameObject.SetActive(true);
+        looseText.text = message;
+    }
 }

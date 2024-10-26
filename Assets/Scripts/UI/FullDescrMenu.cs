@@ -14,8 +14,14 @@ public class FullDescrMenu : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        fullDescrButton.onClick.AddListener(() => gameObject.SetActive(true));
+        fullDescrButton.onClick.AddListener(OpenFullDescrMenu);
         gameObject.SetActive(false);
+    }
+
+    void OpenFullDescrMenu()
+    {
+        SoundManager.Instance.PlayPaperSound(fullDescrButton.gameObject.transform.position);
+        gameObject.SetActive(true);
     }
 
     public void FillDescrMenu(EmployeeSO employeeSO)
