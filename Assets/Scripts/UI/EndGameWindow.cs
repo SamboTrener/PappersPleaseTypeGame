@@ -12,13 +12,11 @@ public class EndGameWindow : MonoBehaviour
     [SerializeField] TextMeshProUGUI finalDescriptionText;
     [SerializeField] GameObject goodEndingObject;
     [SerializeField] GameObject badEningObject;
-    [SerializeField] Button goToMenuButton;
 
 
     private void Awake()
     {
         Instance = this;
-        goToMenuButton.onClick.AddListener(() => SceneManager.LoadScene("Menu"));
         gameObject.SetActive(false);
     }
 
