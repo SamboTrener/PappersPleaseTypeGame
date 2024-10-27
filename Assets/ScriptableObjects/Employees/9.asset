@@ -17,8 +17,16 @@ MonoBehaviour:
   spritesWithAnomaly:
   - {fileID: 21300000, guid: be85cd2fabbfdcd4eaec0dd9ff14261b, type: 3}
   - {fileID: 21300000, guid: 8cb1dbc78dcf3fc4c9f3f36e5007f9f1, type: 3}
-  employeeName: "\u0412\u0430\u0441\u0438\u043B\u0438\u0439 \u0427\u0430\u043F\u0430\u0435\u0432"
+  employeeName: Vasily Chapaev
+  employeeNameRu: "\u0412\u0430\u0441\u0438\u043B\u0438\u0439 \u0427\u0430\u043F\u0430\u0435\u0432"
   anomalyNameList:
+  - Petr Chapaev
+  - 'Vasily Wisest '
+  - Vasserman Chapaev
+  - Vasil Vanich
+  - Venomancer Chapaev
+  - 'Name Surname '
+  anomalyNameListRu:
   - "\u041F\u0435\u0442\u044C\u043A\u0430 \u041D\u044E\u0430\u043D\u0441\u043E\u0432"
   - "\u0412\u0430\u0441\u0438\u043B\u0438\u0439 \u041F\u0440\u0435\u043C\u0443\u0434\u0440\u044B\u0439"
   - "\u0412\u0430\u0441\u0441\u0435\u0440\u043C\u0430\u043D \u0427\u0430\u043F\u0430\u0435\u0432"
@@ -28,7 +36,8 @@ MonoBehaviour:
   passID: 239692
   age: 40
   greeting: '-'
-  fullDescription: "\u0421\u0442\u0430\u0440\u0448\u0438\u0439 \u043D\u0430\u0443\u0447\u043D\u044B\u0439
+  fullDescription: 'en descr '
+  fullDescriptionRu: "\u0421\u0442\u0430\u0440\u0448\u0438\u0439 \u043D\u0430\u0443\u0447\u043D\u044B\u0439
     \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A. \u0416\u0435\u043D\u0430\u0442.
     \u0415\u0441\u0442\u044C \u0434\u0432\u043E\u0435 \u0434\u0435\u0442\u0435\u0439.
     \u041A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u043E\u043D\u043D\u0430\u044F

@@ -44,7 +44,8 @@ public class EmployeeManager : MonoBehaviour
             }
         }
 
-        return result;
+        var random = new System.Random();
+        return result.OrderBy(x => random.Next()).ToList();
     }
 
     EmployeeSO GetEmployeeSO(List<EmployeeSO> employeeSOsCopy, bool shouldBreak)

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: lastShift
   m_EditorClassIdentifier: 
   ID: 1
-  ShiftName: "\u041F\u043E\u0441\u043B\u0435\u0434\u043D\u044F\u044F \u0441\u043C\u0435\u043D\u0430"
+  ShiftName: Last shift
+  ShiftNameRu: "\u041F\u043E\u0441\u043B\u0435\u0434\u043D\u044F\u044F \u0441\u043C\u0435\u043D\u0430"
   VisitersCount: 3
   plotCharacters:
   - {fileID: 11400000, guid: 60854e99dd8cdc54b972237fc91bb6be, type: 2}

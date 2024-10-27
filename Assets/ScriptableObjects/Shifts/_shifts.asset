@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shifts:
   - {fileID: 11400000, guid: 3c5510209e1592a4983c8d310fdd6d7b, type: 2}
+  - {fileID: 11400000, guid: ba4a88b51ae08714abb7d071ad5dd072, type: 2}
   - {fileID: 11400000, guid: 1aeb3affa5fb98945b7a5fe6a3a7c3eb, type: 2}

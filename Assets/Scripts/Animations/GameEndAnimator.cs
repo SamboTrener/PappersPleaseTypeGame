@@ -21,5 +21,13 @@ public class GameEndAnimator : MonoBehaviour
     void SetGameEndAnimationTrigger()
     {
         animator.SetTrigger("GameEnd");
+        StartCoroutine(PLaySoundsInOrder());
+    }
+
+    IEnumerator PLaySoundsInOrder()
+    {
+        SoundManager.Instance.PlayMonsterAttackSound();
+        yield return new WaitForSeconds(2.5f);
+        SoundManager.Instance.PlayPortalSound();
     }
 }

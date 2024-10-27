@@ -18,10 +18,22 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioClip radioInteractionSound;
     [SerializeField] AudioClip stepSound;
     [SerializeField] AudioClip paperSound;
+    [SerializeField] AudioClip monsterAttackSound;
+    [SerializeField] AudioClip portalOpenedSound;
 
     private void Awake()
     {
         Instance = this;
+    }
+
+    public void PlayMonsterAttackSound()
+    {
+        source.PlayOneShot(monsterAttackSound);
+    }
+
+    public void PlayPortalSound()
+    {
+        source.PlayOneShot(portalOpenedSound);
     }
 
     public IEnumerator PlayIronCurtainDownSoundAndWait()

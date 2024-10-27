@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 41459729}
   - component: {fileID: 41459731}
   - component: {fileID: 41459730}
+  - component: {fileID: 41459732}
   m_Layer: 5
   m_Name: shiftEndStaticText
   m_TagString: Untagged
@@ -180,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0421\u043C\u0435\u043D\u0430 \u043C\u043E\u043B \u043A\u043E\u043D\u0447\u0438\u043B\u0430\u0441\u044C"
+  m_text: "\u041A\u043E\u043D\u0435\u0446 \u0441\u043C\u0435\u043D\u044B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
   m_sharedMaterial: {fileID: 7084308849236424409, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
@@ -257,6 +258,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41459728}
   m_CullTransparentMesh: 1
+--- !u!114 &41459732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41459728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 41459730}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u041A\u043E\u043D\u0435\u0446 \u0441\u043C\u0435\u043D\u044B"
+  en: 'End of shift '
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 0
+  countLang: 0
 --- !u!1 &47131086
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +442,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0412\u044B \u043F\u0440\u043E\u0438\u0433\u0440\u0430\u043B\u0438 \u043F\u043E\u0434\u0438"
+  m_text: "\u041F\u043E\u043F\u0443\u0449\u0435\u043D\u043E \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u043E\u0432
+    :"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
   m_sharedMaterial: {fileID: 7084308849236424409, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
@@ -930,43 +984,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &126341386
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 126341387}
-  m_Layer: 5
-  m_Name: Duty4Cell
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &126341387
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126341386}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 461741001}
-  - {fileID: 1277633421}
-  m_Father: {fileID: 359764139}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 316.93}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &142523196
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,8 +1018,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.85, y: 341}
-  m_SizeDelta: {x: 1510.4, y: 270.15}
+  m_AnchoredPosition: {x: 13.11, y: 238.04}
+  m_SizeDelta: {x: 1778.71, y: 476.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &142523198
 MonoBehaviour:
@@ -1054,9 +1071,9 @@ MonoBehaviour:
   m_fontSize: 108
   m_fontSizeBase: 108
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 108
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1224,6 +1241,7 @@ GameObject:
   - component: {fileID: 190350384}
   - component: {fileID: 190350386}
   - component: {fileID: 190350385}
+  - component: {fileID: 190350387}
   m_Layer: 5
   m_Name: staticText
   m_TagString: Untagged
@@ -1348,6 +1366,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190350383}
   m_CullTransparentMesh: 1
+--- !u!114 &190350387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190350383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 190350385}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u041F\u0435\u0440\u0435\u0447\u0435\u043D\u044C \u0434\u043E\u043F\u0443\u0441\u0442\u0438\u043C\u044B\u0445
+    \u043F\u0440\u0435\u0432\u0435\u0442\u0441\u0442\u0432\u0438\u0439:"
+  en: 'List of acceptable greetings:'
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 0
+  countLang: 0
 --- !u!1 &209342217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,7 +1610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 244730202}
   m_Layer: 5
-  m_Name: Duty5Cell
+  m_Name: Duty4Cell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1705,6 +1776,7 @@ GameObject:
   - component: {fileID: 304624604}
   - component: {fileID: 304624606}
   - component: {fileID: 304624605}
+  - component: {fileID: 304624607}
   m_Layer: 5
   m_Name: DutieDescription
   m_TagString: Untagged
@@ -1842,6 +1914,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304624603}
   m_CullTransparentMesh: 1
+--- !u!114 &304624607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304624603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 304624605}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u041D\u0435\u043E\u0442\u044A\u0435\u043C\u043B\u0435\u043C\u043E\u0439 \u0447\u0430\u0441\u0442\u044C\u044E
+    \u043D\u0430\u0448\u0435\u0433\u043E \u043F\u0440\u0435\u0434\u043F\u0440\u0438\u044F\u0442\u0438\u044F
+    \u044F\u0432\u043B\u044F\u044E\u0442\u0441\u044F \u043D\u0430\u0448\u0438 \u0432\u0434\u043E\u0445\u043D\u043E\u0432\u043B\u044F\u044E\u0449\u0438\u0435
+    \u043B\u043E\u0437\u0443\u043D\u0433\u0438. \u0422\u043E\u0442, \u043A\u0442\u043E
+    \u043F\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u0432\u0430\u0441
+    \u043D\u0435\u043F\u043E\u0434\u043E\u0431\u0430\u044E\u0449\u0438\u043C \u043E\u0431\u0440\u0430\u0437\u043E\u043C
+    - \u043D\u0435 \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C \u043F\u0440\u043E\u043F\u0443\u0449\u0435\u043D
+    \u043D\u0430 \u0417\u0430\u0432\u043E\u0434! \u042F \u0443\u0432\u0435\u0440\u0435\u043D,
+    \u0447\u0442\u043E \u0432\u044B \u043E\u0442\u043B\u0438\u0447\u043D\u043E \u043F\u043E\u043C\u043D\u0438\u0442\u0435
+    \u0432\u0441\u0435 \u043B\u043E\u0437\u0443\u043D\u0433\u0438, \u043D\u043E \u043D\u0430
+    \u0432\u0441\u044F\u043A\u0438\u0439 \u0441\u043B\u0443\u0447\u0430\u0439, \u0432\u0441\u0435
+    \u043E\u043D\u0438 \u043D\u0430\u043F\u0438\u0441\u0430\u043D\u044B \u043D\u0430
+    \u0444\u043B\u0430\u0436\u043A\u0435, \u043A\u043E\u0442\u043E\u0440\u044B\u0439
+    \u0440\u0430\u0441\u043F\u043E\u043B\u043E\u0436\u0435\u043D \u043D\u0430 \u0432\u0430\u0448\u0435\u043C
+    \u0441\u0442\u043E\u043B\u0435."
+  en: Our inspiring slogans are an integral part of our company. Anyone who greets
+    you in an inappropriate way cannot be allowed to enter the Factory! I'm sure
+    you remember all the slogans perfectly well, but just in case, they are all written
+    on a flag that is located on your desk.
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 0
+  countLang: 0
 --- !u!1 &314275745
 GameObject:
   m_ObjectHideFlags: 0
@@ -2042,8 +2183,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1846600979}
+  m_Children: []
   m_Father: {fileID: 1754410982}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2440,6 +2580,7 @@ GameObject:
   - component: {fileID: 341870177}
   - component: {fileID: 341870179}
   - component: {fileID: 341870178}
+  - component: {fileID: 341870180}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2486,7 +2627,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0418\u0433\u0440\u0430\u0442\u044C \u0434\u0430\u043B\u044C\u0448\u0435"
+  m_text: "\u0421\u043B\u0435\u0434\u0443\u044E\u0449\u0430\u044F \u0441\u043C\u0435\u043D\u0430 "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
   m_sharedMaterial: {fileID: 7084308849236424409, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
@@ -2563,6 +2704,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341870176}
   m_CullTransparentMesh: 1
+--- !u!114 &341870180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341870176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 341870178}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0421\u043B\u0435\u0434\u0443\u044E\u0449\u0430\u044F \u0441\u043C\u0435\u043D\u0430 "
+  en: Start next shift
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 0
+  countLang: 0
 --- !u!1 &349308135
 GameObject:
   m_ObjectHideFlags: 0
@@ -2582,7 +2775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &349308136
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2599,9 +2792,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 755.63, y: 347}
+  m_AnchoredPosition: {x: 808, y: 350}
   m_SizeDelta: {x: 117.2, y: 112.04}
-  m_Pivot: {x: 0.5, y: 0.50000006}
+  m_Pivot: {x: 0.49999997, y: 0.50000006}
 --- !u!114 &349308137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2730,7 +2923,6 @@ RectTransform:
   - {fileID: 465501954}
   - {fileID: 2070849010}
   - {fileID: 896253063}
-  - {fileID: 126341387}
   - {fileID: 244730202}
   - {fileID: 575946643}
   - {fileID: 894160031}
@@ -2863,8 +3055,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1912291195}
   m_HandleRect: {fileID: 1912291194}
   m_Direction: 2
-  m_Value: 1.0000001
-  m_Size: 0.3922485
+  m_Value: 1
+  m_Size: 0.44543126
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2982,147 +3174,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411728406}
   m_CullTransparentMesh: 1
---- !u!1 &461741000
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 461741001}
-  - component: {fileID: 461741003}
-  - component: {fileID: 461741002}
-  m_Layer: 5
-  m_Name: DutieDescription
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &461741001
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461741000}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 126341387}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 30.899994, y: -6.14}
-  m_SizeDelta: {x: 633.53, y: 269}
-  m_Pivot: {x: 0, y: 0.5}
---- !u!114 &461741002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461741000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: "\u0412\u044B \u0432\u0441\u0435\u0433\u0434\u0430 \u043C\u043E\u0436\u0435\u0442\u0435
-    \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C \u0445\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043A\u0443
-    \u043B\u044E\u0431\u043E\u0433\u043E \u0440\u0430\u0431\u043E\u0442\u043D\u0438\u043A\u0430.
-    \u042D\u0442\u0438 \u0445\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043A\u0438
-    \u0434\u043B\u044F \u0430\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438
-    \u0433\u043E\u0442\u043E\u0432\u0438\u043B \u043F\u0440\u043E\u0448\u043B\u044B\u0439
-    \u043A\u043E\u043C\u0435\u043D\u0434\u0430\u043D\u0442. \u041A\u0430\u043A \u0436\u0430\u043B\u044C,
-    \u0447\u0442\u043E \u043E\u043D \u0443\u0448\u0451\u043B \u0442\u0430\u043A \u0440\u0430\u043D\u043E!"
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
-  m_sharedMaterial: {fileID: 7084308849236424409, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 40.9
-  m_fontSizeBase: 30.43
-  m_fontWeight: 400
-  m_enableAutoSizing: 1
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &461741003
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461741000}
-  m_CullTransparentMesh: 1
 --- !u!1 &465501953
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,6 +3222,7 @@ GameObject:
   - component: {fileID: 490849597}
   - component: {fileID: 490849599}
   - component: {fileID: 490849598}
+  - component: {fileID: 490849600}
   m_Layer: 5
   m_Name: DutieDescription
   m_TagString: Untagged
@@ -3307,6 +3359,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490849596}
   m_CullTransparentMesh: 1
+--- !u!114 &490849600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490849596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 490849598}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u041C\u044B \u043F\u0440\u0435\u043A\u0440\u0430\u0441\u043D\u043E \u043F\u043E\u043D\u0438\u043C\u0430\u0435\u043C,
+    \u043A\u0430\u043A \u0442\u043E\u0441\u043A\u043B\u0438\u0432\u043E \u043C\u043E\u0436\u0435\u0442
+    \u0431\u044B\u0442\u044C \u0441\u0438\u0434\u0435\u0442\u044C \u0432 \u0442\u0438\u0448\u0438\u043D\u0435.
+    \u0414\u043B\u044F \u0432\u0430\u0448\u0435\u0433\u043E \u0440\u0430\u0437\u0432\u043B\u0435\u0447\u0435\u043D\u0438\u044F,
+    \u0432 \u043F\u0440\u0438\u0451\u043C\u043D\u043E\u0439 \u043F\u043E\u0441\u0442\u0430\u0432\u043B\u0435\u043D\u043E
+    \u043D\u043E\u0432\u0435\u0439\u0448\u0435\u0435 \u0440\u0430\u0434\u0438\u043E
+    \u0441 \u0440\u0435\u0433\u0443\u043B\u044F\u0442\u043E\u0440\u043E\u043C \u0433\u0440\u043E\u043C\u043A\u043E\u0441\u0442\u0438!
+    \u0412 \u0432\u0430\u0448\u0435 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u0435
+    \u043F\u0440\u0435\u0434\u043E\u0441\u0442\u0430\u0432\u043B\u0435\u043D\u044B
+    4 \u0437\u0430\u043C\u0435\u0447\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0445
+    \u0438 \u043E\u0434\u043E\u0431\u0440\u0435\u043D\u043D\u044B\u0445 \u043D\u0430\u0448\u0438\u043C
+    \u0441\u043E\u0432\u0435\u0442\u043E\u043C \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u0438
+    \u0440\u0430\u0434\u0438\u043E\u0441\u0442\u0430\u043D\u0446\u0438\u0438. \u0412\u043A\u043B\u044E\u0447\u0430\u0439\u0442\u0435
+    \u0438 \u043D\u0435 \u0441\u043A\u0443\u0447\u0430\u0439\u0442\u0435!"
+  en: We are well aware of how dreary it can be to sit in silence. For your entertainment,
+    the latest radio with volume control is installed in the reception area! 4 wonderful
+    and approved by our Security Council radio stations are provided for your use.
+    Turn it on and don't get bored!
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 0
+  countLang: 0
 --- !u!1 &502077437
 GameObject:
   m_ObjectHideFlags: 0
@@ -3501,6 +3621,8 @@ MonoBehaviour:
   radioInteractionSound: {fileID: 8300000, guid: c9ede53c1a7483049b72df2f3cacc679, type: 3}
   stepSound: {fileID: 8300000, guid: 64c57d4062920fe439288f85f6b62bfa, type: 3}
   paperSound: {fileID: 8300000, guid: 56a33d1f8f8fb8e4e8947b75471eba35, type: 3}
+  monsterAttackSound: {fileID: 8300000, guid: 6cda36ddeb892bb42a36ef918176265e, type: 3}
+  portalOpenedSound: {fileID: 8300000, guid: 39b13bd37fd605c48a9ac5c22ecbfaea, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3603,7 +3725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 575946643}
   m_Layer: 5
-  m_Name: Duty6Cell
+  m_Name: Duty5Cell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3850,6 +3972,7 @@ GameObject:
   - component: {fileID: 616267128}
   - component: {fileID: 616267130}
   - component: {fileID: 616267129}
+  - component: {fileID: 616267131}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -3896,7 +4019,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u0430\u0441\u043F\u043E\u0440\u0442"
+  m_text: ID
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
   m_sharedMaterial: {fileID: 7084308849236424409, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
@@ -3973,6 +4096,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 616267127}
   m_CullTransparentMesh: 1
+--- !u!114 &616267131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616267127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 616267129}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u041F\u0430\u0441\u043F\u043E\u0440\u0442"
+  en: ID
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 0
+  countLang: 0
 --- !u!1 &627805323
 GameObject:
   m_ObjectHideFlags: 0
@@ -4223,6 +4398,7 @@ GameObject:
   - component: {fileID: 643709576}
   - component: {fileID: 643709578}
   - component: {fileID: 643709577}
+  - component: {fileID: 643709579}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4269,7 +4445,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0412\u0435\u0440\u043D\u0443\u0442\u044C\u0441\u044F \u0432 \u043C\u0435\u043D\u044E"
+  m_text: "\u0412 \u043C\u0435\u043D\u044E"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
   m_sharedMaterial: {fileID: 7084308849236424409, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
@@ -4346,6 +4522,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643709575}
   m_CullTransparentMesh: 1
+--- !u!114 &643709579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643709575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 643709577}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0412 \u043C\u0435\u043D\u044E"
+  en: Back to menu
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 0
+  countLang: 0
 --- !u!1 &645671894
 GameObject:
   m_ObjectHideFlags: 0
@@ -4765,6 +4993,7 @@ GameObject:
   - component: {fileID: 767099722}
   - component: {fileID: 767099724}
   - component: {fileID: 767099723}
+  - component: {fileID: 767099725}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -4811,7 +5040,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0414\u043E\u0441\u044C\u0435"
+  m_text: Dossier
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
   m_sharedMaterial: {fileID: 7084308849236424409, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
@@ -4888,6 +5117,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767099721}
   m_CullTransparentMesh: 1
+--- !u!114 &767099725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767099721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 767099723}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0414\u043E\u0441\u044C\u0435"
+  en: Dossier
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 0
+  countLang: 0
 --- !u!1 &769757606
 GameObject:
   m_ObjectHideFlags: 0
@@ -5374,7 +5655,7 @@ GameObject:
   m_Component:
   - component: {fileID: 894160031}
   m_Layer: 5
-  m_Name: 'Duty7Cell '
+  m_Name: 'Duty6Cell '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5688,6 +5969,7 @@ GameObject:
   - component: {fileID: 946928470}
   - component: {fileID: 946928472}
   - component: {fileID: 946928471}
+  - component: {fileID: 946928473}
   m_Layer: 5
   m_Name: DutieDescription
   m_TagString: Untagged
@@ -5816,6 +6098,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946928469}
   m_CullTransparentMesh: 1
+--- !u!114 &946928473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946928469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 946928471}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0418 \u043F\u043E\u043C\u043D\u0438\u0442\u0435! \u041E\u0442 \u0432\u0430\u0448\u0438\u0445
+    \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0439 \u0437\u0430\u0432\u0438\u0441\u0438\u0442
+    \u0431\u043B\u0430\u0433\u043E\u043F\u043E\u043B\u0443\u0447\u0438\u0435 \u043D\u0430\u0448\u0435\u0433\u043E
+    \u0432\u0430\u0436\u043D\u0435\u0439\u0448\u0435\u0433\u043E \u0434\u043B\u044F
+    \u0447\u0435\u043B\u043E\u0432\u0435\u0447\u0435\u0441\u0442\u0432\u0430 \u043F\u0440\u0435\u0434\u043F\u0440\u0438\u044F\u0442\u0438\u044F!
+    \u0421\u043B\u0430\u0432\u0430 \u0417\u0430\u0432\u043E\u0434\u0443!"
+  en: And remember! The well-being of our most important enterprise for humanity
+    depends on your actions! Glory to the Factory!
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 0
+  countLang: 0
 --- !u!1 &947568304
 GameObject:
   m_ObjectHideFlags: 0
@@ -5850,7 +6190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20, y: 0}
+  m_AnchoredPosition: {x: -9.22, y: -36.8}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &947568306
@@ -6097,6 +6437,7 @@ GameObject:
   - component: {fileID: 1005386262}
   - component: {fileID: 1005386264}
   - component: {fileID: 1005386263}
+  - component: {fileID: 1005386265}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -6143,7 +6484,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0421\u043F\u0438\u0441\u043E\u043A \u0440\u0430\u0431\u043E\u0442\u043D\u0438\u043A\u043E\u0432"
+  m_text: List of employees
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
   m_sharedMaterial: {fileID: 7084308849236424409, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
@@ -6220,6 +6561,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005386261}
   m_CullTransparentMesh: 1
+--- !u!114 &1005386265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005386261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 1005386263}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0421\u043F\u0438\u0441\u043E\u043A \u0440\u0430\u0431\u043E\u0442\u043D\u0438\u043A\u043E\u0432"
+  en: List of employees
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 0
+  countLang: 0
 --- !u!1 &1007002834
 GameObject:
   m_ObjectHideFlags: 0
@@ -6623,6 +7016,7 @@ GameObject:
   - component: {fileID: 1059016053}
   - component: {fileID: 1059016055}
   - component: {fileID: 1059016054}
+  - component: {fileID: 1059016056}
   m_Layer: 5
   m_Name: DutieDescription
   m_TagString: Untagged
@@ -6759,6 +7153,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059016052}
   m_CullTransparentMesh: 1
+--- !u!114 &1059016056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059016052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 1059016054}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0414\u043E\u0441\u0442\u0443\u043F \u043D\u0430 \u0417\u0430\u0432\u043E\u0434
+    \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043D \u0442\u043E\u043B\u044C\u043A\u043E
+    \u043D\u0430\u0448\u0438\u043C \u0440\u0430\u0431\u043E\u0442\u043D\u0438\u043A\u0430\u043C!
+    \u0421\u0442\u0440\u043E\u0433\u043E \u0441\u043B\u0435\u0434\u0438\u0442\u0435
+    \u0437\u0430 \u0442\u0435\u043C, \u043A\u043E\u0433\u043E \u043F\u0443\u0441\u043A\u0430\u0435\u0442\u0435!
+    \u0415\u0441\u043B\u0438 \u0441 \u0440\u0430\u0431\u043E\u0442\u043D\u0438\u043A\u043E\u043C
+    \u0432\u0441\u0451 \u0432 \u043F\u043E\u0440\u044F\u0434\u043A\u0435 - \u0436\u043C\u0438\u0442\u0435
+    \u0437\u0435\u043B\u0451\u043D\u0443\u044E \u043A\u043D\u043E\u043F\u043A\u0443\u2026
+    \u0412 \u0438\u043D\u043E\u043C \u0441\u043B\u0443\u0447\u0430\u0435, \u0435\u0441\u043B\u0438
+    \u0440\u0430\u0431\u043E\u0442\u043D\u0438\u043A \u0432\u044B\u0433\u043B\u044F\u0434\u0438\u0442
+    \u0438\u043B\u0438 \u0432\u0435\u0434\u0435\u0442 \u0441\u0435\u0431\u044F \u043F\u043E\u0434\u043E\u0437\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u043E,
+    \u0438\u043B\u0438 \u0436\u0435 \u0438\u043C\u0435\u0435\u0442 \u043F\u0440\u043E\u0431\u043B\u0435\u043C\u044B
+    \u0441 \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u043C\u0438 - \u0436\u043C\u0438\u0442\u0435
+    \u043A\u0440\u0430\u0441\u043D\u0443\u044E \u043A\u043D\u043E\u043F\u043A\u0443! "
+  en: "Only our employees are allowed access to the Factory! Strictly watch who you
+    let in! If everything is fine with the employee, press the green button\u2026
+    Otherwise, if an employee looks or behaves suspiciously, or has problems with
+    documents, press the red button!"
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 0
+  countLang: 0
 --- !u!1 &1165335380
 GameObject:
   m_ObjectHideFlags: 0
@@ -6770,6 +7232,7 @@ GameObject:
   - component: {fileID: 1165335381}
   - component: {fileID: 1165335383}
   - component: {fileID: 1165335382}
+  - component: {fileID: 1165335384}
   m_Layer: 5
   m_Name: DutieDescription
   m_TagString: Untagged
@@ -6903,6 +7366,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165335380}
   m_CullTransparentMesh: 1
+--- !u!114 &1165335384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165335380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 1165335382}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "(((\u041E\u043D\u0438))) \u043D\u0435 \u0441\u043B\u0438\u0448\u043A\u043E\u043C
+    \u0445\u043E\u0440\u043E\u0448\u043E \u043F\u043E\u0434\u0434\u0435\u043B\u044B\u0432\u0430\u044E\u0442
+    \u043F\u0430\u0441\u043F\u043E\u0440\u0442\u0430, \u0442\u0430\u043A \u0447\u0442\u043E
+    \u0434\u043E\u043F\u0443\u0441\u043A\u0430\u044E\u0442 \u043E\u0448\u0438\u0431\u043A\u0438
+    \u0432 \u0434\u0430\u043D\u043D\u044B\u0445. \u0421\u0432\u0435\u0440\u044F\u0439\u0442\u0435
+    \u0434\u0430\u043D\u043D\u044B\u0435 \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430
+    \u0441 \u0434\u0430\u043D\u043D\u044B\u043C\u0438 \u0432 \u0440\u0430\u0431\u043E\u0447\u0435\u043C
+    \u0436\u0443\u0440\u043D\u0430\u043B\u0435 \u043D\u0430 \u0432\u0430\u0448\u0435\u043C
+    \u0441\u0442\u043E\u043B\u0435. \u0412\u0441\u0451, \u0447\u0442\u043E \u043D\u0430\u043F\u0438\u0441\u0430\u043D\u043E
+    \u0432 \u0440\u0430\u0431\u043E\u0447\u0435\u043C \u0436\u0443\u0440\u043D\u0430\u043B\u0435
+    - \u0438\u0441\u0442\u0438\u043D\u0430."
+  en: (((They))) don't forge passports very well, so they make mistakes in the data.
+    Check the document data against the data in the work log on your desk. Everything
+    that is written in the work log is the truth.
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 0
+  countLang: 0
 --- !u!1 &1178446939
 GameObject:
   m_ObjectHideFlags: 0
@@ -7378,6 +7905,7 @@ GameObject:
   - component: {fileID: 1213967163}
   - component: {fileID: 1213967165}
   - component: {fileID: 1213967164}
+  - component: {fileID: 1213967166}
   m_Layer: 5
   m_Name: DutieDescription
   m_TagString: Untagged
@@ -7509,6 +8037,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213967162}
   m_CullTransparentMesh: 1
+--- !u!114 &1213967166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213967162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 1213967164}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0421\u043C\u043E\u0442\u0440\u0438\u0442\u0435 \u043D\u0430 \u0432\u043D\u0435\u0448\u043D\u043E\u0441\u0442\u044C
+    \u043F\u0440\u0438\u0445\u043E\u0434\u044F\u0449\u0438\u0445 \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u043E\u0432!
+    (((\u041E\u043D\u0438))) \u043D\u0435\u043F\u043B\u043E\u0445\u043E \u0443\u043C\u0435\u044E\u0442
+    \u043F\u0440\u0438\u0442\u0432\u043E\u0440\u044F\u0442\u044C\u0441\u044F \u043B\u044E\u0434\u044C\u043C\u0438.
+    \u0424\u043E\u0442\u043E \u043D\u0430\u0441\u0442\u043E\u044F\u0449\u0438\u0445
+    \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u043E\u0432 \u0432\u0441\u0435\u0433\u0434\u0430
+    \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u043E \u0432 \u0440\u0430\u0431\u043E\u0447\u0435\u043C
+    \u0436\u0443\u0440\u043D\u0430\u043B\u0435 \u043D\u0430 \u0432\u0430\u0448\u0435\u043C
+    \u0441\u0442\u043E\u043B\u0435."
+  en: Look at the appearance of the incoming employees! (((They))) are good at pretending
+    to be people. Photos of real employees are always available in the work log on
+    your desk.
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 0
+  countLang: 0
 --- !u!1 &1220261690
 GameObject:
   m_ObjectHideFlags: 0
@@ -7672,6 +8262,7 @@ GameObject:
   - component: {fileID: 1234249839}
   - component: {fileID: 1234249841}
   - component: {fileID: 1234249840}
+  - component: {fileID: 1234249842}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -7718,7 +8309,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u0435\u0440\u0435\u0438\u0433\u0440\u0430\u0442\u044C \u043C\u043E\u043B "
+  m_text: "\u041F\u0435\u0440\u0435\u0438\u0433\u0440\u0430\u0442\u044C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
   m_sharedMaterial: {fileID: 7084308849236424409, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
@@ -7795,6 +8386,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234249838}
   m_CullTransparentMesh: 1
+--- !u!114 &1234249842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234249838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 1234249840}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u041F\u0435\u0440\u0435\u0438\u0433\u0440\u0430\u0442\u044C"
+  en: Play again
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 0
+  countLang: 0
 --- !u!1 &1260274293
 GameObject:
   m_ObjectHideFlags: 0
@@ -8012,7 +8655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 359764139}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 0.1
@@ -8041,7 +8684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Padding: {x: 0, y: 0, z: 0, w: 0}
+  m_Padding: {x: 0, y: 0, z: 0, w: 125}
   m_Softness: {x: 0, y: 0}
 --- !u!114 &1273679520
 MonoBehaviour:
@@ -8063,7 +8706,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1660f82efd3fd024abfa932c547956fa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 52621fa048026164986c0d08b7be5c23, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8094,81 +8737,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeButton: {fileID: 1805827802}
---- !u!1 &1277633420
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1277633421}
-  - component: {fileID: 1277633423}
-  - component: {fileID: 1277633422}
-  m_Layer: 5
-  m_Name: DutieIcon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1277633421
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277633420}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 126341387}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 349, y: 8.465}
-  m_SizeDelta: {x: 300, y: 300}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1277633422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277633420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1277633423
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277633420}
-  m_CullTransparentMesh: 1
 --- !u!1 &1320495758
 GameObject:
   m_ObjectHideFlags: 0
@@ -8366,7 +8934,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1660f82efd3fd024abfa932c547956fa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 52621fa048026164986c0d08b7be5c23, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8467,6 +9035,7 @@ GameObject:
   - component: {fileID: 1379774480}
   - component: {fileID: 1379774482}
   - component: {fileID: 1379774481}
+  - component: {fileID: 1379774483}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -8513,7 +9082,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u042D\u0442\u0430\u043F\u044B \u043F\u0440\u043E\u0432\u0435\u0440\u043A\u0438"
+  m_text: Verification steps
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
   m_sharedMaterial: {fileID: 7084308849236424409, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
@@ -8590,6 +9159,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379774479}
   m_CullTransparentMesh: 1
+--- !u!114 &1379774483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379774479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 1379774481}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u042D\u0442\u0430\u043F\u044B \u043F\u0440\u043E\u0432\u0435\u0440\u043A\u0438 "
+  en: Verification steps
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 0
+  countLang: 0
 --- !u!1 &1389648470
 GameObject:
   m_ObjectHideFlags: 0
@@ -9106,6 +9727,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ac2dc7b9229cb4b478c9277547790274, type: 2}
   - {fileID: 11400000, guid: 2cc4ea33ca1cb20469179ba959657b4d, type: 2}
   - {fileID: 11400000, guid: f1510a9602749c14b831782d38742638, type: 2}
+  - {fileID: 11400000, guid: cf682da5830faf649a9fb7cf19dd29bf, type: 2}
   minAllowedEmployeeCount: 1
   minNotAllowedEmployeeCount: 1
 --- !u!4 &1444811103
@@ -10849,140 +11471,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805827800}
   m_CullTransparentMesh: 1
---- !u!1 &1846600978
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1846600979}
-  - component: {fileID: 1846600981}
-  - component: {fileID: 1846600980}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1846600979
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846600978}
-  m_LocalRotation: {x: -0, y: -0, z: -0.0712472, w: 0.9974587}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 317437253}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -8.171}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87.5, y: -4.6}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1846600980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846600978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: .......
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 57ca55ade3b7a594981c744a025ba51d, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 94a856171a7f66745b525499f7c8fcf7, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4282435537
-  m_fontColor: {r: 0.8207547, g: 0.7798607, b: 0.2516465, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 8
-  m_fontSizeBase: 8
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1846600981
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846600978}
-  m_CullTransparentMesh: 1
 --- !u!1 &1870627675
 GameObject:
   m_ObjectHideFlags: 0
@@ -11253,6 +11741,7 @@ GameObject:
   - component: {fileID: 1896293151}
   - component: {fileID: 1896293153}
   - component: {fileID: 1896293152}
+  - component: {fileID: 1896293154}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -11376,6 +11865,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896293150}
   m_CullTransparentMesh: 1
+--- !u!114 &1896293154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896293150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 1896293152}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0412 \u043C\u0435\u043D\u044E"
+  en: Back to menu
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 0
+  countLang: 0
 --- !u!1 &1912291193
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,8 +17,14 @@ MonoBehaviour:
   spritesWithAnomaly:
   - {fileID: 21300000, guid: 559cd8b795bcd5747aebb64eb7237ff0, type: 3}
   - {fileID: 21300000, guid: ea52c1d4a69caff42be532a8f5e36c25, type: 3}
-  employeeName: "\u0412\u0438\u043A\u0442\u043E\u0440 \u0421\u044B\u0447\u0435\u0432"
+  employeeName: 'Victor Sychev '
+  employeeNameRu: "\u0412\u0438\u043A\u0442\u043E\u0440 \u0421\u044B\u0447\u0435\u0432"
   anomalyNameList:
+  - Victor Tsoi
+  - 'Viscount Sychin '
+  - 'Victor Janklod '
+  - 'Vint Sychev '
+  anomalyNameListRu:
   - "\u0412\u0438\u043A\u0442\u043E\u0440 \u0422\u0441\u043E\u0439"
   - "\u0412\u0438\u043A\u043E\u043D\u0442 \u0421\u044B\u0447\u0438\u043D"
   - "\u0412\u0438\u043A\u0442\u043E\u0440 \u0416\u0430\u043D\u043A\u043B\u043E\u0434"
@@ -26,7 +32,8 @@ MonoBehaviour:
   passID: 993497
   age: 37
   greeting: '-'
-  fullDescription: "\u0420\u0430\u0431\u043E\u0447\u0438\u0439. \u0416\u0435\u043D\u0430\u0442.
+  fullDescription: en descr
+  fullDescriptionRu: "\u0420\u0430\u0431\u043E\u0447\u0438\u0439. \u0416\u0435\u043D\u0430\u0442.
     \u0415\u0441\u0442\u044C \u0441\u044B\u043D. \u0420\u0430\u0431\u043E\u0442\u0430\u0435\u0442
     \u043D\u0430 \u043D\u0430\u0448\u0435\u043C \u043F\u0440\u0435\u0434\u043F\u0440\u0438\u044F\u0442\u0438\u0438.
     \u041A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u043E\u043D\u043D\u0430\u044F

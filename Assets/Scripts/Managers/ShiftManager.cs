@@ -31,7 +31,14 @@ public class ShiftManager : MonoBehaviour
 
         plotCharacters = new List<PlotCharacterSO>(shift.plotCharacters);
 
-        StartCoroutine(ShowTextForSeconds(shift.ShiftName));
+        if(YGManager.GetLanguageStr() == "ru")
+        {
+            StartCoroutine(ShowTextForSeconds(shift.ShiftNameRu));
+        }
+        else
+        {
+            StartCoroutine(ShowTextForSeconds(shift.ShiftName));
+        }
 
 
         if (TryGetPlotCharacter(out PlotCharacterSO plotCharacterSO))
@@ -51,13 +58,31 @@ public class ShiftManager : MonoBehaviour
         {
             if (isPreviousAccepted == true)
             {
-                StartCoroutine(LooseGameWindow.Instance.LooseGameWithAnimation("Вы пропустили монстра и он всех убил блин"));
+                if(YGManager.GetLanguageStr() == "ru")
+                {
+                    StartCoroutine(LooseGameWindow.Instance.LooseGameWithAnimation("Вы провалились, пропустив одного из (((них))). \"Объект\" вышел из под контроля." +
+                                                                                    "Остаётся только гадать, какие ужасные последствия это за собой повлечет"));
+                }
+                else
+                {
+                    StartCoroutine(LooseGameWindow.Instance.LooseGameWithAnimation("You failed by letting one of (((them))) in. The \"Object\" is out of control." +
+                                        "We can only guess what terrible consequences this will entail"));
+                }
             }
             else
             {
                 IronCurtain.Instance.OnIronCurtainDown?.Invoke();
                 currentCharacter.StopPlayingSound();
-                StartCoroutine(LooseGameWindow.Instance.LooseGameWithMessageAfterWait("Вы ликвидировали сотрудинка завода. Ну вы и тварь"));
+                if(YGManager.GetLanguageStr() == "ru")
+                {
+                    StartCoroutine(LooseGameWindow.Instance.LooseGameWithMessageAfterWait("Вы проявили излишнюю подозрительность и ликвидировали сотрудника Завода."
+                                                    + " В конце смены вас встретила всенародная милиция. Завтра вы будете осуждены за убийство и подрывную деятельность. Слава Заводу!"));
+                }
+                else
+                {
+                    StartCoroutine(LooseGameWindow.Instance.LooseGameWithMessageAfterWait("You showed excessive suspicion and eliminated an employee of the Factory." + 
+                        " At the end of the shift, you were met by the national police. Tomorrow you will be convicted of murder and subversion. Glory to the Factory!"));
+                }
             }
             return;
         }
@@ -107,6 +132,8 @@ public class ShiftManager : MonoBehaviour
         SaveLoadManager.SaveCurrentShiftToCompleted();
         currentCharacterNumber = 0;
         StartCoroutine(ShiftEndWindow.Instance.ShowShiftEndWindowAfterWait(monstersKilled, employeeAccepted));
+        monstersKilled = 0;
+        employeeAccepted = 0;
     }
 
     public void CompleteShiftTemp() => CompleteShift();

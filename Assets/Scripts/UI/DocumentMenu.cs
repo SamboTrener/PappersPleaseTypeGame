@@ -20,7 +20,14 @@ public class DocumentMenu : MonoBehaviour
 
     public void ShowDocument(EmployeeSO employeeSO)
     {
-        nameText.text = $"Name : {employeeSO.employeeName}";
+        if(YGManager.GetLanguageStr() == "ru")
+        {
+            nameText.text = $"Name : {employeeSO.employeeNameRu}";
+        }
+        else
+        {
+            nameText.text = $"Name : {employeeSO.employeeName}";
+        }
         ageText.text = $"Age : {employeeSO.age}";
         documentDataText.text = $"ID : {employeeSO.passID}";
         documentPhoto.sprite = employeeSO.baseSprite;

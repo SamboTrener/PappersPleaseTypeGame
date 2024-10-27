@@ -12,8 +12,18 @@ public class CellOfEmployeesList : MonoBehaviour
     public void MapCellInfoWithSO(EmployeeSO employeeSO)
     {
         iconField.sprite = employeeSO.baseSprite;
-        nameField.text = $"Name : {employeeSO.employeeName}";
-        ageField.text = $"Age : {employeeSO.age}" ;
-        passIdField.text = $"Pass ID : {employeeSO.passID}";
+
+        if(YGManager.GetLanguageStr() == "ru")
+        {
+            nameField.text = $"Имя : {employeeSO.employeeNameRu}";
+            ageField.text = $"Возраст : {employeeSO.age}";
+            passIdField.text = $"Номер документа : {employeeSO.passID}";
+        }
+        else
+        {
+            nameField.text = $"Name : {employeeSO.employeeName}";
+            ageField.text = $"Age : {employeeSO.age}";
+            passIdField.text = $"Pass ID : {employeeSO.passID}";
+        }
     }
 }
