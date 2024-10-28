@@ -51,6 +51,7 @@ public class PlotCharacter : CommonCharacter
 
     void PrepareForFinalDesicion()
     {
+        FullDescrMenu.Instance.FillDescrMenuWithEmptiness();
         var sounds = GetComponent<CharacterSounds>();
         sounds.enabled = false;
         DialogueManager.Instance.GetDialogueText().text = plotCharacterSO.cueArray[0];

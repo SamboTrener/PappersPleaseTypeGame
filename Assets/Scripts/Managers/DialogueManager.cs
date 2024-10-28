@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
         validGreetingsRu = new string[] { "Слава Заводу!", "Да здравствует завод!", "Механизируем общество!", "Будет жить завод!",
             "Возвысится завод!", "Мы те, кто делает мир лучше!" };
 
-        validGreetingsRu = new string[] { "Glory to the Factory!", "Long live the Factory!", "We are mechanizing society!", 
+        validGreetings = new string[] { "Glory to the Factory!", "Long live the Factory!", "We are mechanizing society!", 
             "The Factory will live!", "The Factory will rise!", "We are the ones who make the world a better place!" };
 
         invalidGreetingsRu = new string[] { "Завод - мой дом родной!","Я люблю завод!","Я хочу увидеть объект","Я хочу потрогать объект", "Я хочу объект",
