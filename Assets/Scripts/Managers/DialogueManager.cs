@@ -66,8 +66,32 @@ public class DialogueManager : MonoBehaviour
     public void ShowNextCueButton() => nextCueButton.gameObject.SetActive(true);
     public void HideNextCueButton() => nextCueButton.gameObject.SetActive(false);
 
-    public string GetRandomInvalidGreeting() => invalidGreetingsRu[UnityEngine.Random.Range(0, invalidGreetingsRu.Length)];
-    public string GetRandomValidGreeting() => validGreetingsRu[UnityEngine.Random.Range(0, validGreetingsRu.Length)];
-    public string[] GetAllValidGreetings() => validGreetingsRu;
+    public string GetRandomInvalidGreeting()
+    {
+        if(YGManager.GetLanguageStr() == "ru")
+        {
+            return invalidGreetingsRu[UnityEngine.Random.Range(0, invalidGreetingsRu.Length)];
+        }
+        else
+        {
+            return invalidGreetings[UnityEngine.Random.Range(0, invalidGreetingsRu.Length)];
+        }
+    }
+
+    public string GetRandomValidGreeting()
+    {
+        if(YGManager.GetLanguageStr() == "ru")
+        {
+            return validGreetingsRu[UnityEngine.Random.Range(0, validGreetingsRu.Length)];
+        }
+        else
+        {
+            return validGreetings[UnityEngine.Random.Range(0, validGreetingsRu.Length)];
+        }
+    }
+    public string[] GetAllValidGreetings()
+    {
+        return YGManager.GetLanguageStr() == "ru" ? validGreetingsRu : validGreetings;
+    }  
 }
 

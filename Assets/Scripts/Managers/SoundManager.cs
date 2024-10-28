@@ -21,6 +21,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioClip monsterAttackSound;
     [SerializeField] AudioClip portalOpenedSound;
 
+    [SerializeField] AudioClip gameEndSound;
+
     private void Awake()
     {
         Instance = this;
@@ -77,5 +79,12 @@ public class SoundManager : MonoBehaviour
     public void PlayPaperSound(Vector2 position)
     {
         AudioSource.PlayClipAtPoint(paperSound, position, 1f);
+    }
+
+    public void PlayGameEndSoundLooped()
+    {
+        source.clip = gameEndSound;
+        source.loop = true;
+        source.Play();
     }
 }

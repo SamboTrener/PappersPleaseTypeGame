@@ -20,7 +20,7 @@ public class EndGameWindow : MonoBehaviour
 
     int iter;
     bool isFactoryEnding;
-    
+
 
     private void Awake()
     {
@@ -29,8 +29,10 @@ public class EndGameWindow : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void ShowGameEndWindow(bool isFactoryEnding) 
+    public void ShowGameEndWindow(bool isFactoryEnding)
     {
+        SoundManager.Instance.PlayGameEndSoundLooped();
+        MusicManager.Instance.StopMusic();
         this.isFactoryEnding = isFactoryEnding;
         iter = -1;
         FillEndingData(isFactoryEnding);
@@ -41,11 +43,11 @@ public class EndGameWindow : MonoBehaviour
     void ShowNextEndingInfo()
     {
         ++iter;
-        if(iter > endingSprites.Length || iter > endingText.Length)
+        if (iter >= endingSprites.Length - 1 || iter >= endingText.Length - 1)
         {
             nextButton.onClick.RemoveAllListeners();
             nextButton.onClick.AddListener(() => SceneManager.LoadScene("Menu"));
-            if(YGManager.GetLanguageStr() == "ru")
+            if (YGManager.GetLanguageStr() == "ru")
             {
                 nextButtonText.text = isFactoryEnding ? "Слава Заводу!" : "Слава Разлому!";
             }
@@ -54,20 +56,17 @@ public class EndGameWindow : MonoBehaviour
                 nextButtonText.text = isFactoryEnding ? "Glory to the Factory!" : "Glory to the Rift!";
             }
         }
-        else
-        {
-            textContainer.text = endingText[iter];
-            imageContainer.sprite = endingSprites[iter];
-        }
+        textContainer.text = endingText[iter];
+        imageContainer.sprite = endingSprites[iter];
     }
 
     void FillEndingData(bool isFactoryEnding)
     {
-        if(YGManager.GetLanguageStr() == "ru")
+        if (YGManager.GetLanguageStr() == "ru")
         {
             if (isFactoryEnding)
             {
-                endingText = new string[] 
+                endingText = new string[]
                 {
                     "Вы ликвидировали представителя комитета Регулирования Аномальных Зон и Ликвидации Опасных Материй. " +
                     "Позже выяснилось, что о таком комитете  не слышал ни один человек в государственном аппарате. " +

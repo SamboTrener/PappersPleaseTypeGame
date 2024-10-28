@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 5
   ShiftName: "\u0421\u0440\u0435\u0434\u0430. \u0412\u0435\u0447\u0435\u0440."
+  ShiftNameRu: Wednesday. Evening.
   VisitersCount: 3
   plotCharacters:
   - {fileID: 11400000, guid: 60854e99dd8cdc54b972237fc91bb6be, type: 2}

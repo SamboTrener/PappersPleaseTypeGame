@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c865a33fdda1df24ba181bba5194ec22, type: 3}
-  m_Name: shift2
+  m_Name: shift10
   m_EditorClassIdentifier: 
-  ID: 2
-  ShiftName: "\u0412\u0442\u043E\u0440\u043D\u0438\u043A. \u0423\u0442\u0440\u043E."
-  ShiftNameRu: Tuesday. Morning.
+  ID: 10
+  ShiftName: "\u0421\u0443\u0431\u0431\u043E\u0442\u0430. \u0423\u0442\u0440\u043E."
+  ShiftNameRu: Saturday. Morning.
   VisitersCount: 3
-  plotCharacters: []
+  plotCharacters:
+  - {fileID: 11400000, guid: 60854e99dd8cdc54b972237fc91bb6be, type: 2}
+  - {fileID: 11400000, guid: 525656bc41e24be438da103955d15896, type: 2}

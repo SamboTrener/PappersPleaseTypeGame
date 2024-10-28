@@ -6,6 +6,8 @@ using static Unity.VisualScripting.Member;
 
 public class MusicManager : MonoBehaviour
 {
+    public static MusicManager Instance { get; private set; }
+
     [SerializeField] AudioSource musicSource;
 
     [SerializeField] AudioClip[] trackList;
@@ -24,6 +26,7 @@ public class MusicManager : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;   
         musicSource.clip = trackList[currentStationID];
         musicSource.loop = true;
         musicSource.Play();
@@ -97,5 +100,10 @@ public class MusicManager : MonoBehaviour
 
         volumeUpButton.interactable = !volumeUpButton.interactable;
         volumeDownButton.interactable = !volumeDownButton.interactable;
+    }
+
+    public void StopMusic()
+    {
+        musicSource.volume = 0;
     }
 }
