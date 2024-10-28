@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c865a33fdda1df24ba181bba5194ec22, type: 3}
-  m_Name: lastShift
+  m_Name: shift14
   m_EditorClassIdentifier: 
-  ID: 2
-  ShiftName: Last shift
-  ShiftNameRu: "\u041F\u043E\u0441\u043B\u0435\u0434\u043D\u044F\u044F \u0441\u043C\u0435\u043D\u0430"
+  ID: 14
+  ShiftName: "\u041F\u043E\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u0438\u043A.
+    \u0423\u0442\u0440\u043E. \u0421\u043D\u043E\u0432\u0430."
+  ShiftNameRu: Monday. Morning. Again.
   VisitersCount: 3
   plotCharacters:
   - {fileID: 11400000, guid: 60854e99dd8cdc54b972237fc91bb6be, type: 2}

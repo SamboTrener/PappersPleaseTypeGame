@@ -33,9 +33,13 @@ MonoBehaviour:
   passID: 247595
   age: 20
   greeting: '-'
-  fullDescription: en descr
+  fullDescription: 'Network engineer. Half a year of experience. Unmarried. Inexperienced.
+    Qualification rating is below average. Does not show independence in performing
+    tasks. Entered the service half a year ago on the recommendation of his father
+    - Victor Sychev. '
   fullDescriptionRu: "\u0421\u0435\u0442\u0435\u0432\u043E\u0439 \u0438\u043D\u0436\u0435\u043D\u0435\u0440.
-    \u041D\u0435 \u0436\u0435\u043D\u0430\u0442. \u041D\u0435\u043E\u043F\u044B\u0442\u0435\u043D.
+    \u0421\u0442\u0430\u0436 \u043F\u043E\u043B \u0433\u043E\u0434\u0430. \u041D\u0435
+    \u0436\u0435\u043D\u0430\u0442. \u041D\u0435\u043E\u043F\u044B\u0442\u0435\u043D.
     \u041A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u043E\u043D\u043D\u0430\u044F
     \u043E\u0446\u0435\u043D\u043A\u0430 - \u043D\u0438\u0436\u0435 \u0441\u0440\u0435\u0434\u043D\u0435\u0433\u043E.
     \u041D\u0435 \u043F\u0440\u043E\u044F\u0432\u043B\u044F\u0435\u0442 \u0441\u0430\u043C\u043E\u0441\u0442\u043E\u044F\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C

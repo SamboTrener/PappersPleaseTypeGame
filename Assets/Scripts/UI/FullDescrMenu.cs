@@ -35,4 +35,9 @@ public class FullDescrMenu : MonoBehaviour
             fullDescr.text = employeeSO.fullDescription;
         }
     }
+
+    public void FillDescrMenuWithEmptiness()
+    {
+        fullDescr.text = "";
+    }
 }

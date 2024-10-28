@@ -13,7 +13,14 @@ public class ShiftCell : MonoBehaviour
 
     public void MapShiftParameters(ShiftSO shiftSO)
     {
-        shiftName.text = shiftSO.ShiftName;
+        if(YGManager.GetLanguageStr() == "ru")
+        {
+            shiftName.text = shiftSO.ShiftNameRu;
+        }
+        else
+        {
+            shiftName.text = shiftSO.ShiftName;
+        }
         playButton = GetComponent<Button>();
         if (SaveLoadManager.IsShiftCompleted(shiftSO))
         {
