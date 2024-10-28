@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     {
         SetIsLastShift();
         var currentShiftID = SaveLoadManager.GetCurrentShiftID();
+        YGManager.SendEndShiftMetrica(currentShiftID, SaveLoadManager.GetDifficultyLevel());
         for (int i = 0; i < shifts.shifts.Count; i++)
         {
             if (shifts.shifts[i].ID == currentShiftID)
@@ -61,9 +62,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void EndGame(bool isGoodEnding)
+    public void EndGame(bool isFactoryEnding)
     {
-        if (!isGoodEnding)
+        YGManager.SendEndGameMetrica(isFactoryEnding);
+        if (!isFactoryEnding)
         {
             var brokenEmployeeSos = EmployeeManager.Instance.GetAllEmployeeSOsWithBrokenSprite();
             StartCoroutine(CharacterSpawner.Instance.EndGameWithSpawnAllAnomalied(brokenEmployeeSos));
