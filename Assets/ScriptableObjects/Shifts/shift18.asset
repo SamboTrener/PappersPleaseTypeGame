@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: shift18
   m_EditorClassIdentifier: 
   ID: 18
-  ShiftName: "\u041D\u0430\u043A\u0430\u043D\u0443\u043D\u0435"
-  ShiftNameRu: The morning before
+  ShiftName: The morning before
+  ShiftNameRu: "\u041D\u0430\u043A\u0430\u043D\u0443\u043D\u0435 "
   VisitersCount: 3
   plotCharacters:
   - {fileID: 11400000, guid: 60854e99dd8cdc54b972237fc91bb6be, type: 2}

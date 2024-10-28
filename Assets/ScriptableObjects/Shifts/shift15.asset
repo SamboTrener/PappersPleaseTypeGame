@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: shift15
   m_EditorClassIdentifier: 
   ID: 15
-  ShiftName: "\u041F\u043E\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u0438\u043A.
+  ShiftName: Monday. Evening. Again.
+  ShiftNameRu: "\u041F\u043E\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u0438\u043A.
     \u0412\u0435\u0447\u0435\u0440. \u0421\u043D\u043E\u0432\u0430."
-  ShiftNameRu: Monday. Evening. Again.
   VisitersCount: 3
   plotCharacters:
   - {fileID: 11400000, guid: 60854e99dd8cdc54b972237fc91bb6be, type: 2}
