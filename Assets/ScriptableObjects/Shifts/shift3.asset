@@ -15,5 +15,6 @@ MonoBehaviour:
   ID: 3
   ShiftName: Tuesday. Evening.
   ShiftNameRu: "\u0412\u0442\u043E\u0440\u043D\u0438\u043A. \u0412\u0435\u0447\u0435\u0440."
-  VisitersCount: 8
-  plotCharacters: []
+  VisitersCount: 6
+  plotCharacters:
+  - {fileID: 11400000, guid: 2cbb7e0abf2955748a5a3868d4685490, type: 2}

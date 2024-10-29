@@ -15,7 +15,6 @@ MonoBehaviour:
   ID: 19
   ShiftName: Masks are off
   ShiftNameRu: "\u041C\u0430\u0441\u043A\u0438 \u0441\u0431\u0440\u043E\u0448\u0435\u043D\u044B"
-  VisitersCount: 0
+  VisitersCount: 10
   plotCharacters:
-  - {fileID: 11400000, guid: 60854e99dd8cdc54b972237fc91bb6be, type: 2}
-  - {fileID: 11400000, guid: 525656bc41e24be438da103955d15896, type: 2}
+  - {fileID: 11400000, guid: a8dbe7ff60af3cb469d71e0224e5e8be, type: 2}

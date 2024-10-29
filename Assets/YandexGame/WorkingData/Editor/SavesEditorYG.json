@@ -1,9 +1,9 @@
 {
-  "idSave": 56,
+  "idSave": 64,
   "isFirstSession": false,
   "language": "ru",
   "promptDone": false,
-  "currentShiftID": 0,
+  "currentShiftID": 4,
   "difficultyLevel": 2,
   "completedShifts": [
     {

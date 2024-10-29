@@ -16,7 +16,6 @@ MonoBehaviour:
   ShiftName: Monday. Morning. Again.
   ShiftNameRu: "\u041F\u043E\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u0438\u043A.
     \u0423\u0442\u0440\u043E. \u0421\u043D\u043E\u0432\u0430."
-  VisitersCount: 3
+  VisitersCount: 10
   plotCharacters:
-  - {fileID: 11400000, guid: 60854e99dd8cdc54b972237fc91bb6be, type: 2}
-  - {fileID: 11400000, guid: 525656bc41e24be438da103955d15896, type: 2}
+  - {fileID: 11400000, guid: 9eba19c13336e3b4eb7afa14d8321386, type: 2}

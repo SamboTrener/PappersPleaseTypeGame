@@ -22,14 +22,16 @@ public class DocumentMenu : MonoBehaviour
     {
         if(YGManager.GetLanguageStr() == "ru")
         {
-            nameText.text = $"Name : {employeeSO.employeeNameRu}";
+            nameText.text = $"Имя : {employeeSO.employeeNameRu}";
+            ageText.text = $"Возраст : {employeeSO.age}";
+            documentDataText.text = $"Номер : {employeeSO.passID}";
         }
         else
         {
             nameText.text = $"Name : {employeeSO.employeeName}";
+            ageText.text = $"Age : {employeeSO.age}";
+            documentDataText.text = $"ID : {employeeSO.passID}";
         }
-        ageText.text = $"Age : {employeeSO.age}";
-        documentDataText.text = $"ID : {employeeSO.passID}";
         documentPhoto.sprite = employeeSO.baseSprite;
 
         documentButton.gameObject.SetActive(true);

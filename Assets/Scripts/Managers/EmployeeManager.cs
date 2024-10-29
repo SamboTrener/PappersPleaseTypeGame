@@ -83,6 +83,7 @@ public class EmployeeManager : MonoBehaviour
                 break;
             case DifficultyLevel.Hard:
                 var randomValue = Random.value;
+                Debug.Log(randomValue);
                 if(randomValue <= 0.33)
                 {
                     BreakSprite(employee);

@@ -15,7 +15,6 @@ MonoBehaviour:
   ID: 5
   ShiftName: Wednesday. Evening.
   ShiftNameRu: "\u0421\u0440\u0435\u0434\u0430. \u0412\u0435\u0447\u0435\u0440."
-  VisitersCount: 3
+  VisitersCount: 7
   plotCharacters:
-  - {fileID: 11400000, guid: 60854e99dd8cdc54b972237fc91bb6be, type: 2}
   - {fileID: 11400000, guid: 525656bc41e24be438da103955d15896, type: 2}
