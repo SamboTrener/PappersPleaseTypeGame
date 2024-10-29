@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c865a33fdda1df24ba181bba5194ec22, type: 3}
   m_Name: shift19
   m_EditorClassIdentifier: 
-  ID: 18
-  ShiftName: "\u041D\u0430\u043A\u0430\u043D\u0443\u043D\u0435"
-  ShiftNameRu: The morning before
-  VisitersCount: 3
+  ID: 19
+  ShiftName: Masks are off
+  ShiftNameRu: "\u041C\u0430\u0441\u043A\u0438 \u0441\u0431\u0440\u043E\u0448\u0435\u043D\u044B"
+  VisitersCount: 0
   plotCharacters:
   - {fileID: 11400000, guid: 60854e99dd8cdc54b972237fc91bb6be, type: 2}
   - {fileID: 11400000, guid: 525656bc41e24be438da103955d15896, type: 2}

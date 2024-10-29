@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: shift10
   m_EditorClassIdentifier: 
   ID: 10
-  ShiftName: "\u0421\u0443\u0431\u0431\u043E\u0442\u0430. \u0423\u0442\u0440\u043E."
-  ShiftNameRu: Saturday. Morning.
+  ShiftName: Saturday. Morning.
+  ShiftNameRu: "\u0421\u0443\u0431\u0431\u043E\u0442\u0430. \u0423\u0442\u0440\u043E."
   VisitersCount: 3
   plotCharacters:
   - {fileID: 11400000, guid: 60854e99dd8cdc54b972237fc91bb6be, type: 2}
