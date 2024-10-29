@@ -74,7 +74,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            return invalidGreetings[UnityEngine.Random.Range(0, invalidGreetingsRu.Length)];
+            return invalidGreetings[UnityEngine.Random.Range(0, invalidGreetings.Length)];
         }
     }
 
@@ -86,7 +86,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            return validGreetings[UnityEngine.Random.Range(0, validGreetingsRu.Length)];
+            return validGreetings[UnityEngine.Random.Range(0, validGreetings.Length)];
         }
     }
     public string[] GetAllValidGreetings()

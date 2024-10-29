@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc79dcd12fa30d2439b0f1a05bcdcbc5, type: 3}
   m_Name: FactoryFighter1
   m_EditorClassIdentifier: 
-  baseSprite: {fileID: 21300000, guid: 9fc4dfe1163a39f4c82484b3437fa5ec, type: 3}
+  baseSprite: {fileID: 21300000, guid: da5190674a7763346b292bb759515bbe, type: 3}
   hasPermission: 0
   isFromLeft: 1
   cueArray:

@@ -13691,10 +13691,10 @@ RectTransform:
   - {fileID: 1178446940}
   - {fileID: 349308136}
   - {fileID: 1735295161}
-  - {fileID: 1419384388}
-  - {fileID: 1892922350}
   - {fileID: 1870627676}
   - {fileID: 2090583400}
+  - {fileID: 1419384388}
+  - {fileID: 1892922350}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

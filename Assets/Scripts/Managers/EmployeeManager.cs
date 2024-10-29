@@ -50,8 +50,7 @@ public class EmployeeManager : MonoBehaviour
 
     EmployeeSO GetEmployeeSO(List<EmployeeSO> employeeSOsCopy, bool shouldBreak)
     {
-        var nextEmployee = employeeSOsCopy[Random.Range(0, employeeSOsCopy.Count - 1)];
-
+        var nextEmployee = employeeSOsCopy[Random.Range(0, employeeSOsCopy.Count)];
         var nextEmployeeCopy = EmployeeSO.CreateInstance(nextEmployee);
 
         nextEmployeeCopy.greeting = DialogueManager.Instance.GetRandomValidGreeting();
@@ -83,7 +82,6 @@ public class EmployeeManager : MonoBehaviour
                 break;
             case DifficultyLevel.Hard:
                 var randomValue = Random.value;
-                Debug.Log(randomValue);
                 if(randomValue <= 0.33)
                 {
                     BreakSprite(employee);
@@ -116,7 +114,7 @@ public class EmployeeManager : MonoBehaviour
         var randomValue = Random.value;
         if (randomValue <= 0.33)
         {
-            employee.employeeName = employee.anomalyNameList[Random.Range(0, employee.anomalyNameList.Count - 1)];
+            employee.employeeName = employee.anomalyNameList[Random.Range(0, employee.anomalyNameList.Count)];
         }
         else if (randomValue <= 0.66)
         {
