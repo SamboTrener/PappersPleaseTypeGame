@@ -60,13 +60,13 @@ public class ShiftManager : MonoBehaviour
             {
                 if(YGManager.GetLanguageStr() == "ru")
                 {
-                    StartCoroutine(LooseGameWindow.Instance.LooseGameWithAnimation("Вы провалились, пропустив одного из (((них))). \"Объект\" вышел из под контроля." +
-                                                                                    "Остаётся только гадать, какие ужасные последствия это за собой повлечет"));
+                    StartCoroutine(LooseGameWindow.Instance.LooseGameWithAnimation("Вы провалились, пропустив одного из [них]. Объект вышел из под контроля." +
+                                                                                    " Остаётся только гадать, какие ужасные последствия это за собой повлечет"));
                 }
                 else
                 {
-                    StartCoroutine(LooseGameWindow.Instance.LooseGameWithAnimation("You failed by letting one of (((them))) in. The \"Object\" is out of control." +
-                                        "We can only guess what terrible consequences this will entail"));
+                    StartCoroutine(LooseGameWindow.Instance.LooseGameWithAnimation("You failed by letting one of [them] in. The Object is out of control." +
+                                        " We can only guess what terrible consequences this will entail"));
                 }
             }
             else

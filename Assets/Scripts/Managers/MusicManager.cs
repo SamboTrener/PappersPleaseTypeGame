@@ -102,8 +102,13 @@ public class MusicManager : MonoBehaviour
         volumeDownButton.interactable = !volumeDownButton.interactable;
     }
 
-    public void StopMusic()
+    public void UnPauseMusic()
     {
-        musicSource.volume = 0;
+        musicSource.UnPause();
+    }
+
+    public void PauseMusic()
+    {
+        musicSource.Pause();
     }
 }

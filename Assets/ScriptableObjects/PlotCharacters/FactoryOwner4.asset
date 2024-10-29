@@ -59,4 +59,26 @@ MonoBehaviour:
     \u044F \u0437\u0430\u0431\u043E\u043B\u0442\u0430\u043B\u0441\u044F, \u0443\u0436\u0435
     \u0443\u0445\u043E\u0436\u0443"
   - "\u0421\u043B\u0430\u0432\u0430 \u0417\u0430\u0432\u043E\u0434\u0443!"
+  cueArrayEn:
+  - Good morning, watchman
+  - "You've been working hard these days\u2026"
+  - 'I''ll tell you about the Object '
+  - 'Our entire glorious Factory depends on the Object '
+  - 'Although we don''t know with certainty what an Object is... '
+  - 'But its properties... '
+  - They are amazing!
+  - By interacting with the Object in a certain way...
+  - '...we can get a special alloy of metal '
+  - This alloy is not rejected by the human body!
+  - On the contrary!
+  - The person feels the prosthetic limbs made of this alloy as if they were their
+    own limbs!
+  - "To give a man back the ability to walk\u2026 "
+  - '...Or replace a failing internal organ with a synthetic one '
+  - 'What once seemed like a fairy tale has now come true! '
+  - 'History is being made at our Factory '
+  - And you are part of that history!
+  - 'Isn''t that wonderful? '
+  - All right, I've been talking too much, I'm leaving now
+  - Glory to the Factory!
   orderOfComming: 0

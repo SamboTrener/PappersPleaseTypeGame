@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Linq;
 using UnityEngine;
+using YG;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +21,12 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void OnEnable()
+    {
+        YandexGame.StopTheGameEvent += PauseGame;
+        YandexGame.StartTheGameEvent += ContinueGame;
     }
 
     private void Start()
@@ -82,10 +89,14 @@ public class GameManager : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0f;
+        SoundManager.Instance.PauseSounds();
+        MusicManager.Instance.PauseMusic();
     }
 
     public void ContinueGame()
     {
         Time.timeScale = 1f;
+        SoundManager.Instance.UnPauseSounds();
+        MusicManager.Instance.UnPauseMusic();
     }
 }

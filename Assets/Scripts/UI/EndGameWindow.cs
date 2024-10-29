@@ -32,7 +32,7 @@ public class EndGameWindow : MonoBehaviour
     public void ShowGameEndWindow(bool isFactoryEnding)
     {
         SoundManager.Instance.PlayGameEndSoundLooped();
-        MusicManager.Instance.StopMusic();
+        MusicManager.Instance.PauseMusic();
         this.isFactoryEnding = isFactoryEnding;
         iter = -1;
         FillEndingData(isFactoryEnding);

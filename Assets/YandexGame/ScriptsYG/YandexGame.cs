@@ -545,6 +545,21 @@ namespace YG
         }
         #endregion Fullscren Ad
 
+
+        #region GameStop
+        public static Action StopTheGameEvent;
+        public void StopTheGame()
+        {
+            StopTheGameEvent?.Invoke();
+        }
+
+        public static Action StartTheGameEvent;
+        public void StartTheGame()
+        {
+            StartTheGameEvent?.Invoke();
+        }
+        #endregion GameStop
+
         #region Rewarded Video
         private float timeOnOpenRewardedAds;
 

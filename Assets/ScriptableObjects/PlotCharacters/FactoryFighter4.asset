@@ -56,8 +56,8 @@ MonoBehaviour:
   - "\u042F \u043F\u043E\u043B\u0443\u0447\u0438\u043B \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043D\u0438\u0435
     \u043D\u0430 \u0448\u0442\u0443\u0440\u043C \u0441 \u0446\u0435\u043B\u044C\u044E
     \u0437\u0430\u0445\u0432\u0430\u0442\u0430 \u0438 \u0438\u0437\u043E\u043B\u044F\u0446\u0438\u0438
-    \u041E\u0431\u044A\u0435\u043A\u0442\u0430, \u0432\u0441\u0451 \u0441\u043B\u0443\u0447\u0438\u0442\u044C\u0441\u044F
-    \u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430."
+    \u041E\u0431\u044A\u0435\u043A\u0442\u0430, \u0432\u0441\u0451 \u0441\u043B\u0443\u0447\u0438\u0442\u0441\u044F
+    <b>\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430</b>."
   - "\u042F \u0432\u0435\u0440\u043D\u0443\u0441\u044C \u0441 \u0433\u0440\u0443\u043F\u043F\u043E\u0439
     \u0438 \u043D\u0430\u0434\u0435\u044E\u0441\u044C, \u0447\u0442\u043E \u0442\u044B
     \u043D\u0435 \u0441\u0442\u0430\u043D\u0435\u0448\u044C \u043D\u0430\u043C \u043C\u0435\u0448\u0430\u0442\u044C"
@@ -66,4 +66,26 @@ MonoBehaviour:
     \u043A\u0442\u043E \u0435\u043C\u0443 \u043F\u043E\u043C\u043E\u0433"
   - "\u041F\u043E\u0434\u0443\u043C\u0430\u0439 \u043E\u0431 \u044D\u0442\u043E\u043C
     \u043D\u0430 \u0434\u043E\u0441\u0443\u0433\u0435..."
-  orderOfComming: 3
+  cueArrayEn:
+  - Good evening!
+  - I've got some big news
+  - Our organization got to the bottom of it
+  - "This Object\u2026"
+  - It was discovered quite by accident by a mining company.
+  - In one local mine.
+  - About a year before your Factory was founded
+  - We haven't been able to contact anyone from the brigade that excavated the Object
+  - I think they're all dead by now
+  - Only their testimonies remain
+  - Those of them who touched the Object with their hands...
+  - Fell in love with the object
+  - Yes, it sounds weird, but there's no other way to call it!
+  - We have a theory that the Object possesses a will
+  - "And whatever your boss is doing, we're sure he's not doing it for people\u2026"
+  - He is doing the will of the Object!
+  - I have received authorization to assault for the purpose of seizing and isolating
+    the Object, everything will happen <b>the day after tomorrow</b>
+  - I'll be back with an extraction team, and I hope you won't get in our way
+  - The state does not abandon in trouble those who helped it
+  - "Think about it at your leisure\u2026"
+  orderOfComming: 0

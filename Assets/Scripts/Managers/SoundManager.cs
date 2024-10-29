@@ -87,4 +87,14 @@ public class SoundManager : MonoBehaviour
         source.loop = true;
         source.Play();
     }
+
+    public void UnPauseSounds()
+    {
+        source.UnPause();
+    }
+
+    public void PauseSounds()
+    {
+        source.Pause();
+    }
 }

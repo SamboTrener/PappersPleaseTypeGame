@@ -44,4 +44,16 @@ MonoBehaviour:
   - "\u041D\u0443 \u043B\u0430\u0434\u043D\u043E, \u043E\u0431 \u044D\u0442\u043E\u043C
     \u043F\u043E\u0437\u0436\u0435"
   - "\u0421\u043B\u0430\u0432\u0430 \u0417\u0430\u0432\u043E\u0434\u0443!"
+  cueArrayEn:
+  - Good morning, watchman
+  - "I wanted to talk to you\u2026"
+  - I've gotten some reports of a person...
+  - Who's been sniffing around our great enterprise
+  - You know, the activity of our Factory causes fear and envy on the part of detractors
+  - "Many of them will go to any tricky lengths\u2026"
+  - To get the treasure we possess
+  - I don't want you to believe what all sorts of crooks tell you
+  - Especially now is not a good time for doubts...
+  - 'Okay, well, more on that later '
+  - Glory to the Factory!
   orderOfComming: 0

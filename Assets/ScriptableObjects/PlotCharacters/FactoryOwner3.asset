@@ -32,4 +32,14 @@ MonoBehaviour:
     \u043D\u0430 \u043A\u043E\u0442\u043E\u0440\u044B\u0445 \u044F \u043C\u043E\u0433\u0443
     \u043F\u043E\u043B\u043E\u0436\u0438\u0442\u044C\u0441\u044F"
   - "\u0421\u043B\u0430\u0432\u0430 \u0417\u0430\u0432\u043E\u0434\u0443!"
+  cueArrayEn:
+  - Good morning, watchman
+  - 'Is the work progressing? '
+  - We haven't found a shift worker for you yet
+  - For the next 10 days, you're gonna have to work your ass off
+  - You want to know about the Object?
+  - All in good time
+  - Work hard, and I'll tell you
+  - I need people I can count on
+  - Glory to the Factory!
   orderOfComming: 0
