@@ -15,6 +15,6 @@ public class TestButton : MonoBehaviour
 
     void Test()
     {
-        GameManager.Instance.EndGame(false);
+        GameManager.Instance.EndGame(true);
     }
 }
