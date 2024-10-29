@@ -15,6 +15,6 @@ public class TestButton : MonoBehaviour
 
     void Test()
     {
-        ShiftManager.Instance.CompleteShiftTemp();
+        GameManager.Instance.EndGame(false);
     }
 }
