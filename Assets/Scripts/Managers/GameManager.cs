@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        ContinueGame();
         lastShiftID = shifts.shifts.Last().ID;
         DifficultyLevel = SaveLoadManager.GetDifficultyLevel();
         var shiftToStart = shifts.shifts.FirstOrDefault(shift => shift.ID == SaveLoadManager.GetCurrentShiftID());

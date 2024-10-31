@@ -18,12 +18,14 @@ public class PauseWindow : MonoBehaviour
     void OpenPauseWindow()
     {
         GameManager.Instance.PauseGame();
+        pauseButton.interactable = false;
         gameObject.SetActive(true);
     }
 
     void ClosePauseWindow()
     {
         GameManager.Instance.ContinueGame();
+        pauseButton.interactable = true;
         gameObject.SetActive(false);
     }
 }
