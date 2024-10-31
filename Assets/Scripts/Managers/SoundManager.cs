@@ -22,6 +22,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioClip portalOpenedSound;
 
     [SerializeField] AudioClip gameEndSound;
+    [SerializeField] AudioClip windSound;
 
     private void Awake()
     {
@@ -84,6 +85,13 @@ public class SoundManager : MonoBehaviour
     public void PlayGameEndSoundLooped()
     {
         source.clip = gameEndSound;
+        source.loop = true;
+        source.Play();
+    }
+
+    public void PlayWindSoundLooped()
+    {
+        source.clip = windSound;
         source.loop = true;
         source.Play();
     }

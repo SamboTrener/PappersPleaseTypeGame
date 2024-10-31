@@ -20,7 +20,7 @@ public class MusicManager : MonoBehaviour
     [SerializeField] Button[] volumeUpButtons;
     [SerializeField] Button[] volumeDownButtons;
 
-    float lastVolume = 1;
+    float lastVolume = 0.3f;
 
     int currentStationID = 0;
 

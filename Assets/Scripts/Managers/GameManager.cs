@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        SoundManager.Instance.PlayWindSoundLooped();
         ContinueGame();
         lastShiftID = shifts.shifts.Last().ID;
         DifficultyLevel = SaveLoadManager.GetDifficultyLevel();

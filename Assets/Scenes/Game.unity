@@ -3454,7 +3454,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1912291195}
   m_HandleRect: {fileID: 1912291194}
   m_Direction: 2
-  m_Value: 1.0000001
+  m_Value: 1
   m_Size: 0.44543126
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4072,6 +4072,7 @@ MonoBehaviour:
   monsterAttackSound: {fileID: 8300000, guid: 6cda36ddeb892bb42a36ef918176265e, type: 3}
   portalOpenedSound: {fileID: 8300000, guid: 39b13bd37fd605c48a9ac5c22ecbfaea, type: 3}
   gameEndSound: {fileID: 8300000, guid: aca6776a7a8260942baa91e0a3dc7329, type: 3}
+  windSound: {fileID: 8300000, guid: 34cc546cc0c40b74d805cd2c42b918fc, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
