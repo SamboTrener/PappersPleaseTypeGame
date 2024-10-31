@@ -18,7 +18,7 @@ namespace YG
 
         public SavesYG()
         {
-            difficultyLevel = DifficultyLevel.Medium;
+            difficultyLevel = DifficultyLevel.Hard;
             completedShifts = new List<ShiftSaveInfo>();
         }
     }

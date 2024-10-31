@@ -1,34 +1,9 @@
 {
-  "idSave": 111,
+  "idSave": 16,
   "isFirstSession": false,
   "language": "en",
   "promptDone": false,
-  "currentShiftID": 6,
+  "currentShiftID": 0,
   "difficultyLevel": 2,
-  "completedShifts": [
-    {
-      "ID": 0,
-      "MaxCompletedDifficultyLevel": 1
-    },
-    {
-      "ID": 1,
-      "MaxCompletedDifficultyLevel": 1
-    },
-    {
-      "ID": 2,
-      "MaxCompletedDifficultyLevel": 1
-    },
-    {
-      "ID": 3,
-      "MaxCompletedDifficultyLevel": 0
-    },
-    {
-      "ID": 4,
-      "MaxCompletedDifficultyLevel": 2
-    },
-    {
-      "ID": 5,
-      "MaxCompletedDifficultyLevel": 2
-    }
-  ]
+  "completedShifts": []
 }

@@ -12,13 +12,13 @@ public class MusicManager : MonoBehaviour
 
     [SerializeField] AudioClip[] trackList;
 
-    [SerializeField] Button switchMusicButton;
+    [SerializeField] Button[] switchMusicButtons;
 
-    [SerializeField] Button previousStationButton;
-    [SerializeField] Button nextStationButton;
+    [SerializeField] Button[] previousStationButtons;
+    [SerializeField] Button[] nextStationButtons;
 
-    [SerializeField] Button volumeUpButton;
-    [SerializeField] Button volumeDownButton;
+    [SerializeField] Button[] volumeUpButtons;
+    [SerializeField] Button[] volumeDownButtons;
 
     float lastVolume = 1;
 
@@ -30,12 +30,15 @@ public class MusicManager : MonoBehaviour
         musicSource.clip = trackList[currentStationID];
         musicSource.loop = true;
         musicSource.Play();
-        switchMusicButton.onClick.AddListener(TurnOnMusic);
-        previousStationButton.onClick.AddListener(PreviousStation);
-        nextStationButton.onClick.AddListener(NextStation);
+        for(int i = 0; i < switchMusicButtons.Length; i++)
+        {
+            switchMusicButtons[i].onClick.AddListener(TurnOnMusic);
+            previousStationButtons[i].onClick.AddListener(PreviousStation);
+            nextStationButtons[i].onClick.AddListener(NextStation);
 
-        volumeUpButton.onClick.AddListener(VolumeUp);
-        volumeDownButton.onClick.AddListener(VolumeDown);
+            volumeUpButtons[i].onClick.AddListener(VolumeUp);
+            volumeDownButtons[i].onClick.AddListener(VolumeDown);
+        }
     }
 
     void VolumeUp()
@@ -78,8 +81,11 @@ public class MusicManager : MonoBehaviour
         SoundManager.Instance.PlayRadioInteractionSound();
         musicSource.volume = lastVolume;
 
-        switchMusicButton.onClick.RemoveAllListeners();
-        switchMusicButton.onClick.AddListener(TurnOffMusic);
+        for(int i = 0; i < switchMusicButtons.Length; i++)
+        {
+            switchMusicButtons[i].onClick.RemoveAllListeners();
+            switchMusicButtons[i].onClick.AddListener(TurnOffMusic);
+        }
         RevertButtonsInteractable();
     }
 
@@ -88,18 +94,24 @@ public class MusicManager : MonoBehaviour
         SoundManager.Instance.PlayRadioInteractionSound();
         musicSource.volume = 0;
 
-        switchMusicButton.onClick.RemoveAllListeners();
-        switchMusicButton.onClick.AddListener(TurnOnMusic);
+        for(int i = 0; i < switchMusicButtons.Length; i++)
+        {
+            switchMusicButtons[i].onClick.RemoveAllListeners();
+            switchMusicButtons[i].onClick.AddListener(TurnOnMusic);
+        }
         RevertButtonsInteractable();
     }
 
     void RevertButtonsInteractable()
     {
-        previousStationButton.interactable = !previousStationButton.interactable;
-        nextStationButton.interactable = !nextStationButton.interactable;
+        for(int i = 0; i < switchMusicButtons.Length; i++)
+        {
+            previousStationButtons[i].interactable = !previousStationButtons[i].interactable;
+            nextStationButtons[i].interactable = !nextStationButtons[i].interactable;
 
-        volumeUpButton.interactable = !volumeUpButton.interactable;
-        volumeDownButton.interactable = !volumeDownButton.interactable;
+            volumeUpButtons[i].interactable = !volumeUpButtons[i].interactable;
+            volumeDownButtons[i].interactable = !volumeDownButtons[i].interactable;
+        }
     }
 
     public void UnPauseMusic()
