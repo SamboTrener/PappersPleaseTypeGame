@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 61055956}
   - component: {fileID: 61055955}
   m_Layer: 5
-  m_Name: Image
+  m_Name: TextBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3529,10 +3529,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1912291195}
   m_HandleRect: {fileID: 1912291194}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.44543126
   m_Value: 1.0000001
-  m_Size: 0.44543132
+  m_Size: 0.44543126
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9079,6 +9077,7 @@ GameObject:
   - component: {fileID: 1179490414}
   - component: {fileID: 1179490416}
   - component: {fileID: 1179490415}
+  - component: {fileID: 1179490417}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -9102,8 +9101,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -202.04999, y: 0.00010681152}
-  m_SizeDelta: {x: 328.88, y: 0}
+  m_AnchoredPosition: {x: -90.600006, y: -48.46}
+  m_SizeDelta: {x: 111.99, y: -89.3}
   m_Pivot: {x: 0.4861082, y: 0.54262406}
 --- !u!114 &1179490415
 MonoBehaviour:
@@ -9152,15 +9151,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 114
+  m_fontSize: 122.05
   m_fontSizeBase: 114
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 250
   m_fontStyle: 33
   m_HorizontalAlignment: 4
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -9202,6 +9201,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179490413}
   m_CullTransparentMesh: 1
+--- !u!114 &1179490417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179490413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 1179490415}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0414\u0430\u043B\u0435\u0435"
+  en: Next
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 0
+  countLang: 0
 --- !u!1 &1199364039
 GameObject:
   m_ObjectHideFlags: 0
@@ -12947,7 +12998,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1412857179}
   m_HandleRect: {fileID: 1412857178}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
