@@ -1,9 +1,9 @@
 {
-  "idSave": 108,
+  "idSave": 111,
   "isFirstSession": false,
   "language": "en",
   "promptDone": false,
-  "currentShiftID": 5,
+  "currentShiftID": 6,
   "difficultyLevel": 2,
   "completedShifts": [
     {
@@ -24,6 +24,10 @@
     },
     {
       "ID": 4,
+      "MaxCompletedDifficultyLevel": 2
+    },
+    {
+      "ID": 5,
       "MaxCompletedDifficultyLevel": 2
     }
   ]
