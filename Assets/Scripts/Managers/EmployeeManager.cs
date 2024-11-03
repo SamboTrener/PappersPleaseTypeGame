@@ -115,6 +115,7 @@ public class EmployeeManager : MonoBehaviour
         if (randomValue <= 0.33)
         {
             employee.employeeName = employee.anomalyNameList[Random.Range(0, employee.anomalyNameList.Count)];
+            employee.employeeNameRu = employee.anomalyNameListRu[Random.Range(0, employee.anomalyNameListRu.Count)];
         }
         else if (randomValue <= 0.66)
         {

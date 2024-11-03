@@ -1,2 +1,2 @@
-Build path: D:/DATA/Desktop/Билды/pappers_build_2
-Build number: 2
+Build path: D:/DATA/Desktop/Билды/pappers_build_5
+Build number: 6
