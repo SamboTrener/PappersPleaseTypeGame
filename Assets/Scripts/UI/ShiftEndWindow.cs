@@ -23,16 +23,8 @@ public class ShiftEndWindow : MonoBehaviour
     public IEnumerator ShowShiftEndWindowAfterWait(int monstersKilled, int employeeAccepted)
     {
         yield return new WaitForSeconds(GameManager.Instance.StandartTimeToWait);
-        if(YGManager.GetLanguageStr() == "ru")
-        {
-            monstersKilledStatistic.text = $"Вторженцев ликвидировано : {monstersKilled}";
-            employeeAcceptedStatistic.text = $"Сотрудников пропущено : {employeeAccepted}";
-        }
-        else
-        {
-            monstersKilledStatistic.text = $"Intruders eliminated  : {monstersKilled}";
-            employeeAcceptedStatistic.text = $"Employees passed : {employeeAccepted}";
-        }
+        monstersKilledStatistic.text = $"Вторженцев ликвидировано : {monstersKilled}";
+        employeeAcceptedStatistic.text = $"Сотрудников пропущено : {employeeAccepted}";
         gameObject.SetActive(true);
     }
 

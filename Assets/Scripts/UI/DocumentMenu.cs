@@ -20,18 +20,9 @@ public class DocumentMenu : MonoBehaviour
 
     public void ShowDocument(EmployeeSO employeeSO)
     {
-        if(YGManager.GetLanguageStr() == "ru")
-        {
-            nameText.text = $"Имя : {employeeSO.employeeNameRu}";
-            ageText.text = $"Возраст : {employeeSO.age}";
-            documentDataText.text = $"Номер : {employeeSO.passID}";
-        }
-        else
-        {
-            nameText.text = $"Name : {employeeSO.employeeName}";
-            ageText.text = $"Age : {employeeSO.age}";
-            documentDataText.text = $"ID : {employeeSO.passID}";
-        }
+        nameText.text = $"Имя : {employeeSO.employeeNameRu}";
+        ageText.text = $"Возраст : {employeeSO.age}";
+        documentDataText.text = $"Номер : {employeeSO.passID}";
         documentPhoto.sprite = employeeSO.baseSprite;
 
         documentButton.gameObject.SetActive(true);

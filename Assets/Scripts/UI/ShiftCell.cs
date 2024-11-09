@@ -13,14 +13,7 @@ public class ShiftCell : MonoBehaviour
 
     public void MapShiftParameters(ShiftSO shiftSO)
     {
-        if(YGManager.GetLanguageStr() == "ru")
-        {
-            shiftName.text = shiftSO.ShiftNameRu;
-        }
-        else
-        {
-            shiftName.text = shiftSO.ShiftName;
-        }
+        shiftName.text = shiftSO.ShiftNameRu;
         playButton = GetComponent<Button>();
         if (SaveLoadManager.IsShiftCompleted(shiftSO))
         {
@@ -29,7 +22,7 @@ public class ShiftCell : MonoBehaviour
             switch (completedShiftInfo.MaxCompletedDifficultyLevel)
             {
                 case DifficultyLevel.Easy:
-                    isCompletedImage.color = new Color(174 / 255f,190 / 255f, 159 / 255f);
+                    isCompletedImage.color = new Color(174 / 255f, 190 / 255f, 159 / 255f);
                     break;
                 case DifficultyLevel.Medium:
                     isCompletedImage.color = new Color(192 / 255f, 195 / 255f, 115 / 255f);
@@ -42,7 +35,7 @@ public class ShiftCell : MonoBehaviour
 
             playButton.onClick.AddListener(() => LoadSceneWithShift(shiftSO));
         }
-        else if (shiftSO.ID == SaveLoadManager.GetMostHighCompletedShiftID() + 1) 
+        else if (shiftSO.ID == SaveLoadManager.GetMostHighCompletedShiftID() + 1)
         {
             playButton.onClick.AddListener(() => LoadSceneWithShift(shiftSO));
         }

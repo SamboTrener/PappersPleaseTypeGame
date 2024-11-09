@@ -86,7 +86,6 @@ GameObject:
   - component: {fileID: 3588098117625312650}
   - component: {fileID: 1556635517336923110}
   - component: {fileID: 387063843528471559}
-  - component: {fileID: 1391026337545686380}
   m_Layer: 5
   m_Name: UnavailabelnessDescr
   m_TagString: Untagged
@@ -216,65 +215,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &1391026337545686380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4378104727896307973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textMPComponent: {fileID: 387063843528471559}
-  uniqueFontTMP: {fileID: 0}
-  textLComponent: {fileID: 0}
-  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
-  text: 
-  ru: "\u042D\u0442\u0430 \u043E\u0431\u044F\u0437\u0430\u043D\u043D\u043E\u0441\u0442\u044C
-    \u043D\u0435 \u0432\u043E\u0437\u043B\u043E\u0436\u0435\u043D\u0430 \u043D\u0430
-    \u0432\u0430\u0441 \u043D\u0430 \u0434\u0430\u043D\u043D\u043E\u043C \u0443\u0440\u043E\u0432\u043D\u0435
-    \u0441\u043B\u043E\u0436\u043D\u043E\u0441\u0442\u0438. \u041F\u043E\u043C\u0435\u043D\u044F\u0439\u0442\u0435
-    \u0443\u0440\u043E\u0432\u0435\u043D\u044C \u0441\u043B\u043E\u0436\u043D\u043E\u0441\u0442\u0438
-    \u0432 \u043C\u0435\u043D\u044E, \u0435\u0441\u043B\u0438 \u0445\u043E\u0442\u0438\u0442\u0435
-    \u0435\u0451 \u0438\u0441\u043F\u043E\u043B\u043D\u044F\u0442\u044C."
-  en: This duty is not assigned to you at this level of difficulty. Change the difficulty
-    level in the menu if you want to assign this duty.
-  tr: 
-  az: 
-  be: 
-  he: 
-  hy: 
-  ka: 
-  et: 
-  fr: 
-  kk: 
-  ky: 
-  lt: 
-  lv: 
-  ro: 
-  tg: 
-  tk: 
-  uk: 
-  uz: 
-  es: 
-  pt: 
-  ar: 
-  id: 
-  ja: 
-  it: 
-  de: 
-  hi: 
-  changeOnlyFont: 0
-  fontNumber: 0
-  uniqueFont: {fileID: 0}
-  additionalText: {fileID: 0}
-  textHeight: 20
-  processTranslateLabel: 
-  componentTextField: 0
-  countLang: 0
 --- !u!1 &5883809669732294426
 GameObject:
   m_ObjectHideFlags: 0

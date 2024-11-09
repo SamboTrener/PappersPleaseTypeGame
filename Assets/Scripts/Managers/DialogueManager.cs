@@ -68,30 +68,16 @@ public class DialogueManager : MonoBehaviour
 
     public string GetRandomInvalidGreeting()
     {
-        if(YGManager.GetLanguageStr() == "ru")
-        {
-            return invalidGreetingsRu[UnityEngine.Random.Range(0, invalidGreetingsRu.Length)];
-        }
-        else
-        {
-            return invalidGreetings[UnityEngine.Random.Range(0, invalidGreetings.Length)];
-        }
+        return invalidGreetingsRu[UnityEngine.Random.Range(0, invalidGreetingsRu.Length)];
     }
 
     public string GetRandomValidGreeting()
     {
-        if(YGManager.GetLanguageStr() == "ru")
-        {
-            return validGreetingsRu[UnityEngine.Random.Range(0, validGreetingsRu.Length)];
-        }
-        else
-        {
-            return validGreetings[UnityEngine.Random.Range(0, validGreetings.Length)];
-        }
+        return validGreetingsRu[UnityEngine.Random.Range(0, validGreetingsRu.Length)];
     }
     public string[] GetAllValidGreetings()
     {
-        return YGManager.GetLanguageStr() == "ru" ? validGreetingsRu : validGreetings;
+        return validGreetingsRu;
     }  
 }
 

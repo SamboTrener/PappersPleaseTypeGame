@@ -31,7 +31,7 @@ public class PlotCharacter : CommonCharacter
     {
         DialogueManager.Instance.GetDialogueWindow().SetActive(true);
         DialogueManager.Instance.ShowNextCueButton();
-        
+
         if (GameManager.Instance.IsLastShift && ShiftManager.Instance.IsLastCharacter)
         {
             PrepareForFinalDesicion();
@@ -54,20 +54,13 @@ public class PlotCharacter : CommonCharacter
         FullDescrMenu.Instance.FillDescrMenuWithEmptiness();
         var sounds = GetComponent<CharacterSounds>();
         sounds.enabled = false;
-        if(YGManager.GetLanguageStr() == "ru")
-        {
-            DialogueManager.Instance.GetDialogueText().text = plotCharacterSO.cueArray[0];
-        }
-        else
-        {
-            DialogueManager.Instance.GetDialogueText().text = plotCharacterSO.cueArrayEn[0];
-        }
+        DialogueManager.Instance.GetDialogueText().text = plotCharacterSO.cueArray[0];
         DialogueManager.Instance.HideNextCueButton();
     }
 
     void GetNextCue()
     {
-        var cueArrayLen = YGManager.GetLanguageStr() == "ru" ? plotCharacterSO.cueArray.Length : plotCharacterSO.cueArrayEn.Length;
+        var cueArrayLen = plotCharacterSO.cueArray.Length;
         if (currentCue >= cueArrayLen - 1)
         {
             ShiftManager.Instance.MoveCurrentCharacter(!plotCharacterSO.isFromLeft);
@@ -76,14 +69,7 @@ public class PlotCharacter : CommonCharacter
         else
         {
             currentCue++;
-            if(YGManager.GetLanguageStr() == "ru")
-            {
-                DialogueManager.Instance.GetDialogueText().text = plotCharacterSO.cueArray[currentCue];
-            }
-            else
-            {
-                DialogueManager.Instance.GetDialogueText().text = plotCharacterSO.cueArrayEn[currentCue];
-            }
+            DialogueManager.Instance.GetDialogueText().text = plotCharacterSO.cueArray[currentCue];
         }
     }
 

@@ -26,14 +26,7 @@ public class FullDescrMenu : MonoBehaviour
 
     public void FillDescrMenu(EmployeeSO employeeSO)
     {
-        if(YGManager.GetLanguageStr() == "ru")
-        {
-            fullDescr.text = employeeSO.fullDescriptionRu;
-        }
-        else
-        {
-            fullDescr.text = employeeSO.fullDescription;
-        }
+        fullDescr.text = employeeSO.fullDescriptionRu;
     }
 
     public void FillDescrMenuWithEmptiness()

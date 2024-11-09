@@ -10,7 +10,7 @@ public class ShiftManager : MonoBehaviour
     public static ShiftManager Instance { get; private set; }
 
     [SerializeField] TextMeshProUGUI textOnShiftStart;
-   
+
     List<PlotCharacterSO> plotCharacters;
     int monstersKilled;
     int employeeAccepted;
@@ -31,14 +31,7 @@ public class ShiftManager : MonoBehaviour
 
         plotCharacters = new List<PlotCharacterSO>(shift.plotCharacters);
 
-        if(YGManager.GetLanguageStr() == "ru")
-        {
-            StartCoroutine(ShowTextForSeconds(shift.ShiftNameRu));
-        }
-        else
-        {
-            StartCoroutine(ShowTextForSeconds(shift.ShiftName));
-        }
+        StartCoroutine(ShowTextForSeconds(shift.ShiftNameRu));
 
 
         if (TryGetPlotCharacter(out PlotCharacterSO plotCharacterSO))
@@ -58,31 +51,15 @@ public class ShiftManager : MonoBehaviour
         {
             if (isPreviousAccepted == true)
             {
-                if(YGManager.GetLanguageStr() == "ru")
-                {
-                    StartCoroutine(LooseGameWindow.Instance.LooseGameWithAnimation("Вы провалились, пропустив одного из [них]. Объект вышел из под контроля." +
+                StartCoroutine(LooseGameWindow.Instance.LooseGameWithAnimation("Вы провалились, пропустив одного из [них]. Объект вышел из под контроля." +
                                                                                     " Остаётся только гадать, какие ужасные последствия это за собой повлечет"));
-                }
-                else
-                {
-                    StartCoroutine(LooseGameWindow.Instance.LooseGameWithAnimation("You failed by letting one of [them] in. The Object is out of control." +
-                                        " We can only guess what terrible consequences this will entail"));
-                }
             }
             else
             {
                 IronCurtain.Instance.OnIronCurtainDown?.Invoke();
                 currentCharacter.StopPlayingSound();
-                if(YGManager.GetLanguageStr() == "ru")
-                {
-                    StartCoroutine(LooseGameWindow.Instance.LooseGameWithMessageAfterWait("Вы проявили излишнюю подозрительность и ликвидировали сотрудника Завода."
-                                                    + " В конце смены вас встретила всенародная милиция. Завтра вы будете осуждены за убийство и подрывную деятельность. Слава Заводу!"));
-                }
-                else
-                {
-                    StartCoroutine(LooseGameWindow.Instance.LooseGameWithMessageAfterWait("You showed excessive suspicion and eliminated an employee of the Factory." + 
-                        " At the end of the shift, you were met by the national police. Tomorrow you will be convicted of murder and subversion. Glory to the Factory!"));
-                }
+                StartCoroutine(LooseGameWindow.Instance.LooseGameWithMessageAfterWait("Вы проявили излишнюю подозрительность и ликвидировали сотрудника Завода."
+                          + " В конце смены вас встретила всенародная милиция. Завтра вы будете осуждены за убийство и подрывную деятельность. Слава Заводу!"));
             }
             return;
         }
@@ -172,7 +149,7 @@ public class ShiftManager : MonoBehaviour
 
     IEnumerator NextEmployeeAfterWait()
     {
-        yield return new WaitForSeconds(GameManager.Instance.StandartTimeToWait); 
+        yield return new WaitForSeconds(GameManager.Instance.StandartTimeToWait);
         NextEmployee();
     }
 

@@ -13,17 +13,8 @@ public class CellOfEmployeesList : MonoBehaviour
     {
         iconField.sprite = employeeSO.baseSprite;
 
-        if(YGManager.GetLanguageStr() == "ru")
-        {
-            nameField.text = $"Имя : {employeeSO.employeeNameRu}";
-            ageField.text = $"Возраст : {employeeSO.age}";
-            passIdField.text = $"Номер документа : {employeeSO.passID}";
-        }
-        else
-        {
-            nameField.text = $"Name : {employeeSO.employeeName}";
-            ageField.text = $"Age : {employeeSO.age}";
-            passIdField.text = $"Pass ID : {employeeSO.passID}";
-        }
+        nameField.text = $"Имя : {employeeSO.employeeNameRu}";
+        ageField.text = $"Возраст : {employeeSO.age}";
+        passIdField.text = $"Номер документа : {employeeSO.passID}";
     }
 }
