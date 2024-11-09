@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Linq;
 using UnityEngine;
-using YG;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,12 +21,6 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
-    private void OnEnable()
-    {
-        YandexGame.StopTheGameEvent += PauseGame;
-        YandexGame.StartTheGameEvent += ContinueGame;
-    }
-
     private void Start()
     {
         SoundManager.Instance.PlayWindSoundLooped();
@@ -43,7 +35,6 @@ public class GameManager : MonoBehaviour
     {
         SetIsLastShift();
         var currentShiftID = SaveLoadManager.GetCurrentShiftID();
-        YGManager.SendEndShiftMetrica(currentShiftID, SaveLoadManager.GetDifficultyLevel());
         for (int i = 0; i < shifts.shifts.Count; i++)
         {
             if (shifts.shifts[i].ID == currentShiftID)
@@ -73,7 +64,6 @@ public class GameManager : MonoBehaviour
 
     public void EndGame(bool isFactoryEnding)
     {
-        YGManager.SendEndGameMetrica(isFactoryEnding);
         if (!isFactoryEnding)
         {
             var brokenEmployeeSos = EmployeeManager.Instance.GetAllEmployeeSOsWithBrokenSprite();

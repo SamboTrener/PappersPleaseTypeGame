@@ -1,11 +1,37 @@
+using System.IO;
 using System.Linq;
-using YG;
+using UnityEngine;
 
 public static class SaveLoadManager
 {
+    static readonly string fileName = "saveInfo.json";
+    static readonly string saveDataPath = Application.persistentDataPath + "/" + fileName;
+
+    static SaveInfo saveInfo;
+
+    static SaveLoadManager()
+    {
+        if(File.Exists(saveDataPath))
+        {
+            var sr = new StreamReader(saveDataPath);
+            string json = sr.ReadToEnd();
+            sr.Close();
+            saveInfo = JsonUtility.FromJson<SaveInfo>(json);
+        }
+        else
+        {
+            saveInfo = new SaveInfo();
+            string json = JsonUtility.ToJson(saveInfo);
+            var sw = new StreamWriter(saveDataPath);
+            sw.WriteLine(json);
+            sw.Close();
+        }
+    }
+
     public static void SaveCurrentShiftToCompleted()
     {
-        var shiftCompletedBefore = YandexGame.savesData.completedShifts.FirstOrDefault(shiftInfo => shiftInfo.ID == GetCurrentShiftID());
+        var shiftCompletedBefore = saveInfo.completedShifts.FirstOrDefault(shiftInfo => shiftInfo.ID == GetCurrentShiftID());
+
         if (shiftCompletedBefore != null)
         {
             if (shiftCompletedBefore.MaxCompletedDifficultyLevel < GetDifficultyLevel())
@@ -16,28 +42,28 @@ public static class SaveLoadManager
         else
         {
             var shiftToSaveInfo = new ShiftSaveInfo(GetCurrentShiftID(), GetDifficultyLevel());
-            YandexGame.savesData.completedShifts.Add(shiftToSaveInfo);
+            saveInfo.completedShifts.Add(shiftToSaveInfo);
         }
 
-        YandexGame.SaveProgress();
+        RewriteSave();
     }
 
     public static int GetMostHighCompletedShiftID()
     {
-        if (YandexGame.savesData.completedShifts.Count > 0)
+        if (saveInfo.completedShifts.Count > 0)
         {
-            return YandexGame.savesData.completedShifts.OrderByDescending(shift => shift.ID).First().ID;
+            return saveInfo.completedShifts.OrderByDescending(shift => shift.ID).First().ID;
         }
         else 
         {
-            return -1;  //Пока костыляем
+            return -1;  
         }
     }
 
 
     public static bool IsShiftCompleted(ShiftSO shift)
     {
-        foreach (var shiftInfo in YandexGame.savesData.completedShifts)
+        foreach (var shiftInfo in saveInfo.completedShifts)
         {
             if (shift.ID == shiftInfo.ID)
             {
@@ -47,23 +73,43 @@ public static class SaveLoadManager
         return false;
     }
 
-    public static ShiftSaveInfo GetCompletedShiftInfoByID(int id) =>
-        YandexGame.savesData.completedShifts.FirstOrDefault(shiftInfo => shiftInfo.ID == id);
+    public static ShiftSaveInfo GetCompletedShiftInfoByID(int id)
+    {
+        return saveInfo.completedShifts.FirstOrDefault(shiftInfo => shiftInfo.ID == id);
+    }
 
 
-    public static int GetCurrentShiftID() => YandexGame.savesData.currentShiftID;
+    public static int GetCurrentShiftID()
+    {
+        return saveInfo.currentShiftID;
+    }
 
     public static void SetCurrentShiftID(int shiftID)
     {
-        YandexGame.savesData.currentShiftID = shiftID;
-        YandexGame.SaveProgress();
+        saveInfo.currentShiftID = shiftID;
+
+        RewriteSave();
     }
 
     public static void SetDifficultyLevel(DifficultyLevel difficultyLevelToSave)
     {
-        YandexGame.savesData.difficultyLevel = difficultyLevelToSave;
-        YandexGame.SaveProgress();
+        saveInfo.difficultyLevel = difficultyLevelToSave;
+
+        RewriteSave();
     }
 
-    public static DifficultyLevel GetDifficultyLevel() => YandexGame.savesData.difficultyLevel;
+    public static DifficultyLevel GetDifficultyLevel()
+    {
+        return saveInfo.difficultyLevel;
+    }
+
+    
+    static void RewriteSave()
+    {
+        string json = JsonUtility.ToJson(saveInfo);
+        var sw = new StreamWriter(saveDataPath);
+        sw.WriteLine(json);
+        sw.Close();
+        saveInfo = JsonUtility.FromJson<SaveInfo>(json);
+    }
 }
